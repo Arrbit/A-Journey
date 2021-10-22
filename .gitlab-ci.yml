@@ -16,7 +16,7 @@ stages:
   - build
 
 scan:
-  stage: Test
+  stage: scan
   image: shiftleft/scan-oss
   cache:
     key: depscan-DB
