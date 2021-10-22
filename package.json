@@ -4,7 +4,10 @@
     "dev": "nuxt dev",
     "build": "nuxt build"
   },
-  "devDependencies": {
+  "Dependencies": {
     "nuxt3": "latest"
+  },
+  "dependencies": {
+    "@nuxt/bridge": "^0.10.0"
   }
 }
