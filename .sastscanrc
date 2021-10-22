@@ -1,0 +1,16 @@
+{
+  "build_break_rules": {
+    "default": {
+      "max_critical": 5,
+      "max_high": 50,
+      "max_medium": 100
+    },
+    "depscan": {
+      "max_critical": 100,
+      "max_required_critical": 100,
+      "max_optional_critical": 1000
+    }    
+  },
+  "PR_COMMENT_TEMPLATE": "## Scan Summary\n%(summary)s\n## Recommendation\n%(recommendation)s\n"
+}
+
