@@ -17,7 +17,7 @@ stages:
     
 scan:
   stage: Test
-  image: shiftleft/scan-oss
+  image: shiftleft/sast-scan:gl-insights
   cache:
     key: $CI_COMMIT_REF_SLUG
     paths:
