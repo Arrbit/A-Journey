@@ -7,7 +7,6 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "nuxt3": "latest",
-    "@nuxt/bridge": "^0.10.0"
+    "nuxt3": "latest"
   }
 }
