@@ -12,16 +12,16 @@ variables:
   CREDSCAN_DEPTH: 5
 
 stages:
-  - scan
-  - build
-
+  - Test
+  - Build
+    
 scan:
-  stage: scan
-  image: shiftleft/scan-oss
+  stage: Test
+  image: shiftleft/sast-scan:gl-insights
   cache:
-    key: depscan-DB
+    key: $CI_COMMIT_REF_SLUG
     paths:
-      - $VDB_HOME
+      - vdb/
     untracked: true
   script:
     - scan --src ${CI_PROJECT_DIR} --type credscan,depscan,nodejs,dockerfile --out_dir ${CI_PROJECT_DIR}/reports
