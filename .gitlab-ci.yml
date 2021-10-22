@@ -34,7 +34,7 @@ scan:
     when: always
 
 sonarqube-check:
-  stage: build
+  stage: Build
   image: 
     name: sonarsource/sonar-scanner-cli:latest
     entrypoint: [""]
