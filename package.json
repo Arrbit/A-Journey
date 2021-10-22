@@ -2,12 +2,12 @@
   "private": true,
   "scripts": {
     "dev": "nuxt dev",
-    "build": "nuxt build"
-  },
-  "Dependencies": {
-    "nuxt3": "latest"
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
   },
   "dependencies": {
+    "nuxt3": "latest",
     "@nuxt/bridge": "^0.10.0"
   }
 }
