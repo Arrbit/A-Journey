@@ -25,6 +25,7 @@ scan:
     untracked: true
   script:
     - scan --src ${CI_PROJECT_DIR} --type credscan,depscan,nodejs,dockerfile --out_dir ${CI_PROJECT_DIR}/reports
+  allow_failure: true  
   rules:
     - when: always
   artifacts:
