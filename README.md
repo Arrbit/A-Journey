@@ -1,31 +1,24 @@
-# Nuxt 3 Minimal Starter
+# my-app
 
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/netlify/nuxt-starter#NODE_VERSION=14&AWS_LAMBDA_JS_RUNTIME=nodejs14.x)
-
-We recommend to look at the [documentation](http://v3.nuxtjs.org).
-
-## Setup
-
-Make sure to install the dependencies
-
-```bash
-yarn install
+## Project setup
+```
+npm install
 ```
 
-## Development
-
-Start the development server on http://localhost:3000
-
-```bash
-yarn dev
+### Compiles and hot-reloads for development
+```
+npm run serve
 ```
 
-## Production
-
-Build the application for production:
-
-```bash
-yarn build
+### Compiles and minifies for production
+```
+npm run build
 ```
 
-Checkout the [deployment documentation](https://v3.nuxtjs.org/docs/deployment).
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
