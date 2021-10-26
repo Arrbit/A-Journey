@@ -2,59 +2,81 @@
   <v-app>
     <v-app-bar
       app
-      color="primary"
-      dark
+      color="white"
+      light
     >
       <div class="d-flex align-center">
         <v-img
-          alt="Vuetify Logo"
+          alt="SDS Logo"
           class="shrink mr-2"
           contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
+          src="https://sleepingdragons.eu/wp-content/themes/New-Sleeping-Dragons/assets/logos/VectorRed_Transparent.png"
           transition="scale-transition"
           width="40"
         />
 
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
+        SleepingDragons ilvl-helper
+
       </div>
 
       <v-spacer></v-spacer>
 
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
     </v-app-bar>
 
     <v-main>
-      <HelloWorld/>
+      <ilvl/>
     </v-main>
+
+     <v-footer
+      padless="padless"
+    >
+      <v-card
+        flat
+        tile
+        width="100%"
+        class="grey lighten-1 text-center black--text"
+      >
+        <v-card-text>
+          <v-btn
+            v-for="flinks in flinks"
+            :key="flinks"
+            text
+            class="mx-4"
+            :href="flinks.href"
+          >
+          {{ flinks.text }}
+          </v-btn>
+        </v-card-text>
+
+        <v-divider></v-divider>
+
+        <v-card-text class="black--text">
+          {{ new Date().getFullYear() }} — <strong>SleepingDragons</strong>
+        </v-card-text>
+      </v-card>
+    </v-footer>
+
+
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import ilvl from './components/ilvl';
 
 export default {
   name: 'App',
 
   components: {
-    HelloWorld,
+    ilvl,
   },
 
   data: () => ({
-    //
+    flinks: [
+       {text: 'Legal Disclosure', href: 'https://sleepingdragons.eu/contact/' },
+       {text: 'Privacy Policy', href: 'https://sleepingdragons.eu/privacypolicy/' },
+       {text: 'Netlifys GDPR', href: 'https://www.netlify.com/gdpr-ccpa/' },
+       {text: 'Contact', href: 'https://sleepingdragons.eu/contact/' },
+      ],
   }),
 };
 </script>
