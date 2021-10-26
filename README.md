@@ -1,4 +1,4 @@
-# vuetify-3-template
+# my-app
 
 ## Project setup
 ```
