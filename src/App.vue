@@ -1,6 +1,7 @@
 <template>
-  <v-app>
-    <v-app-bar
+  <v-app id="app">
+
+       <v-app-bar
       app
       color="white"
       light
@@ -23,11 +24,11 @@
 
     </v-app-bar>
 
-    <v-main>
-      <ilvl/>
-    </v-main>
 
-     <v-footer
+
+    <router-view/>
+
+    <v-footer
       padless="padless"
     >
       <v-card
@@ -61,14 +62,9 @@
 </template>
 
 <script>
-import ilvl from './components/ilvl';
 
 export default {
   name: 'App',
-
-  components: {
-    ilvl,
-  },
 
   data: () => ({
     flinks: [
