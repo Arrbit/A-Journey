@@ -1,5 +1,5 @@
 <template>
    <div>
-    Endwalker Patch
+    heavensward Patch
    </div>
 </template>

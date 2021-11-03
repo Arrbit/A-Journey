@@ -1,5 +1,5 @@
 <template>
    <div>
-    Endwalker ilvl
+    stormblood ilvl
    </div>
 </template>

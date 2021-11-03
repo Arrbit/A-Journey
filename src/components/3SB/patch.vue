@@ -1,5 +1,5 @@
 <template>
    <div>
-    Endwalker Patch
+    stormblood Patch
    </div>
 </template>

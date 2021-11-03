@@ -1,5 +1,5 @@
 <template>
    <div>
-    Endwalker Patch
+    shadowbringers Patch
    </div>
 </template>

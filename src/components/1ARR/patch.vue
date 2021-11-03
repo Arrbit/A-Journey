@@ -1,5 +1,5 @@
 <template>
    <div>
-    Endwalker Patch
+    a realm reborn Patch
    </div>
 </template>
