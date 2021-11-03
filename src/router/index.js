@@ -108,14 +108,32 @@ const routes = [
       path: '',
       component: Endwalker
     }, {
-      name: 'ilevel',
+      name: 'endwalker.ilevel',
       path: 'ilevel',
       component: EWilvl
     }, {
-      name: 'patch',
+      name: 'endwalker.patch',
       path: 'patch',
       component: EWpatch
     }]
+  },
+
+    {
+      path: '/endwalker',
+      component: EmptyRouterView,
+      children: [{
+        name: 'endwalker',
+        path: '',
+        component: Endwalker
+      }, {
+        name: 'endwalker.ilevel',
+        path: 'ilevel',
+        component: EWilvl
+      }, {
+        name: 'endwalker.patch',
+        path: 'patch',
+        component: EWpatch
+      }]
 }
 ]
 
