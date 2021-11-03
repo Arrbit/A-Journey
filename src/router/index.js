@@ -11,13 +11,17 @@ import Shadowbringers from  '../components/4SH/overview'
 import SHilvl from  '../components/4SH/ilevel'
 import SHpatch from  '../components/4SH/patch'
 
-// import Endwalker from  '../components/5EW/overview'
-// import EWilvl from  '../components/5EW/ilevel'
-// import EWpatch from  '../components/5EW/patch'
+import Stormblood from  '../components/3SB/overview'
+import SBilvl from  '../components/3SB/ilevel'
+import SBpatch from  '../components/3SB/patch'
 
-// import Endwalker from  '../components/5EW/overview'
-// import EWilvl from  '../components/5EW/ilevel'
-// import EWpatch from  '../components/5EW/patch'
+import Heavensward from  '../components/2HW/overview'
+import HWilvl from  '../components/2HW/ilevel'
+import HWpatch from  '../components/2HW/patch'
+
+import ARealmReborn from  '../components/1ARR/overview'
+import ARRilvl from  '../components/1ARR/ilevel'
+import ARRpatch from  '../components/1ARR/patch'
 
 
 
@@ -25,6 +29,59 @@ import SHpatch from  '../components/4SH/patch'
 Vue.use(VueRouter)
 
 const routes = [
+  {
+    path: '/a-realm-reborn',
+    component: EmptyRouterView,
+    children: [{
+      name: 'a-realm-reborn',
+      path: '',
+      component: ARealmReborn
+    }, {
+      name: 'a-realm-reborn.ilevel',
+      path: 'a-realm-reborn/ilevel',
+      component: ARRilvl
+    }, {
+      name: 'a-realm-reborn.patch',
+      path: 'a-realm-reborn/patch',
+      component: ARRpatch
+    }]
+  },
+  
+  {
+    path: '/heavensward',
+    component: EmptyRouterView,
+    children: [{
+      name: 'heavensward',
+      path: '',
+      component: Heavensward
+    }, {
+      name: 'heavensward.ilevel',
+      path: 'heavensward/ilevel',
+      component: HWilvl
+    }, {
+      name: 'heavensward.patch',
+      path: 'heavensward/patch',
+      component: HWpatch
+    }]
+  },
+
+  {
+    path: '/stormblood',
+    component: EmptyRouterView,
+    children: [{
+      name: 'stormblood',
+      path: '',
+      component: Stormblood
+    }, {
+      name: 'stormblood.ilevel',
+      path: 'stormblood/ilevel',
+      component: SBilvl
+    }, {
+      name: 'stormblood.patch',
+      path: 'stormblood/patch',
+      component: SBpatch
+    }]
+  },
   
   {
     path: '/shadowbringers',
