@@ -6,14 +6,14 @@
                     <v-sheet rounded="lg">
                         <v-list color="transparent">
                             <v-list-item
-                             v-for="xpacs in xpacs"
-                             :key="xpacs"
-                             :to="xpacs.route"
-                             v-on:click="setXpac()"
+                             v-for="xpac in xpacs"
+                             :key="xpac.text"
+                             :to="xpac.route"
+                             @click="savexpac(xpac.text)"
                              link>
                                 <v-list-item-content>
                                     <v-list-item-title>
-                                        {{xpacs.text}}
+                                        {{xpac.text}}
                                     </v-list-item-title>
                                 </v-list-item-content>
                             </v-list-item>
@@ -34,7 +34,7 @@
 
                 <v-col>
                     <v-sheet min-height="70vh" rounded="lg">
-                        {{this.expansion}}
+                        {{this.currentxpac}}
                         <router-view />
 
                     </v-sheet>
@@ -44,48 +44,26 @@
     </v-main>
 </template>
 <script>
-    export default {
-        name: 'App',
-        data() {
-            return {
-                expansion: "kein test",
+export default {
+  data: () => ({
+        currentxpac:"Endwalker",
+        modes: [
+            {text: 'Level Progression', route: "/ilevel"},
+            {text: 'Patch Progression', route: `${this.currentxpac}/patch}`}],
 
-                methods: {
-                    setXpac() {return 'newxpac'}
-                },
+        xpacs: [
+            {text: 'A Realm Reborn', route: '/a-realm-reborn'},
+            {text: 'Heavensward', route: '/heavensward'},
+            {text: 'Stormblood',route: '/stormblood'},
+            {text: 'Shadowbringer',route: '/shadowbringers'},
+            {text: 'Endwalker',route: '/'}]}
+        ),
 
-                xpacs: [{
-                        text: 'A Realm Reborn',
-                        route: '/a-realm-reborn'
-                    },
-                    {
-                        text: 'Heavensward',
-                        route: '/heavensward'
-                    },
-                    {
-                        text: 'Stormblood',
-                        route: '/stormblood'
-                    },
-                    {
-                        text: 'Shadowbringer',
-                        route: '/shadowbringers'
-                    },
-                    {
-                        text: 'Endwalker',
-                        route: '/'
-                    },
-                ],
-
-                modes: [{
-                        text: 'Level Progression',
-                        route: "/ilevel"
-                    },
-                    {
-                        text: 'Patch Progression',
-                        route: "/patch"
-                    },
-                ],
-            }
+    methods: {
+        savexpac(newXpac){
+            this.currentxpac = newXpac
         }
     }
+}
+    
 </script>
