@@ -1,5 +1,5 @@
 <template>
    <div>
-    Endwalker ilvl
+    shadowbringers ilvl
    </div>
 </template>

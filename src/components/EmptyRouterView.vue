@@ -9,7 +9,7 @@
                              v-for="xpac in xpacs"
                              :key="xpac.text"
                              :to="xpac.route"
-                             @click="savexpac(xpac.text)"
+                             @click="savexpac(xpac.route)"
                              link>
                                 <v-list-item-content>
                                     <v-list-item-title>
@@ -20,7 +20,11 @@
 
                             <v-divider class="my-2"></v-divider>
 
-                            <v-list-item v-for="modes in modes" :key="modes" :to="modes.route" link>
+                            <v-list-item 
+                             v-for="modes in modes" 
+                             :key="modes" 
+                             :to="currentxpac + modes.route" 
+                            link>
                                 <v-list-item-content>
                                     <v-list-item-title>
                                         {{modes.text}}
@@ -46,24 +50,24 @@
 <script>
 export default {
   data: () => ({
-        currentxpac:"Endwalker",
+        currentxpac:"",
         modes: [
             {text: 'Level Progression', route: "/ilevel"},
-            {text: 'Patch Progression', route: `${this.currentxpac}/patch}`}],
+            {text: 'Patch Progression', route: "/patch"}],
 
         xpacs: [
             {text: 'A Realm Reborn', route: '/a-realm-reborn'},
             {text: 'Heavensward', route: '/heavensward'},
             {text: 'Stormblood',route: '/stormblood'},
             {text: 'Shadowbringer',route: '/shadowbringers'},
-            {text: 'Endwalker',route: '/'}]}
+            {text: 'Endwalker',route: '/endwalker'}]}
         ),
 
     methods: {
         savexpac(newXpac){
             this.currentxpac = newXpac
         }
-    }
+    },
 }
     
 </script>

@@ -101,22 +101,20 @@ const routes = [
   },
 
   {
-    path: '/',
+    path: '/endwalker',
+    alias: '/',
     component: EmptyRouterView,
     children: [{
       name: 'endwalker',
-      path: '',
-      alias: '/endwalker', 
+      path: '/endwalker', 
       component: Endwalker
     }, {
       name: 'endwalker.ilevel',
       path: 'ilevel',
-      alias: '/endwalker/ilevel', 
       component: EWilvl
     }, {
       name: 'endwalker.patch',
       path: 'patch',
-      alias: '/endwalker/patch', 
       component: EWpatch
     }]
   },
