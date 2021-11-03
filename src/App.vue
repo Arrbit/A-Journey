@@ -37,6 +37,7 @@
                 <v-list-item
                   v-for="xpacs in xpacs"
                   :key="xpacs"
+                  :to="xpacs.route"
                   link
                 >
                   <v-list-item-content>
@@ -51,6 +52,7 @@
                   <v-list-item
                   v-for="modes in modes"
                   :key="modes"
+                  :to="modes.route"
                   link
                 >
                   <v-list-item-content>
@@ -132,16 +134,16 @@ export default {
        {text: 'Contact', href: 'https://sleepingdragons.eu/contact/' },
       ],
       xpacs: [
-       {text: 'A Realm Reborn', href: 'https://sleepingdragons.eu/contact/' },
+       {text: 'A Realm Reborn', route: '/a-realm-reborn' },
        {text: 'Heavensward', href: 'https://sleepingdragons.eu/privacypolicy/' },
        {text: 'Stormblood', href: 'https://www.netlify.com/gdpr-ccpa/' },
        {text: 'Shadowbringer', href: 'https://sleepingdragons.eu/contact/' },
-      {text: 'Endwalker', href: 'https://sleepingdragons.eu/contact/' },
+      {text: 'Endwalker', route: '/endwalker' },
       ],
       modes: [
-       {text: 'Overview', href: 'https://sleepingdragons.eu/contact/' },
-       {text: 'Level Progression', href: 'https://sleepingdragons.eu/privacypolicy/' },
-       {text: 'Patch Progression', href: 'https://www.netlify.com/gdpr-ccpa/' },
+       {text: 'Overview', route: '#' },
+       {text: 'Level Progression', route: '#ilevel' },
+       {text: 'Patch Progression', route: '#patch' },
       ],
   }),
 };

@@ -1,6 +1,13 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
+import Endwalker from  '../components/5EW/overview'
+import EWilvl from  '../components/5EW/ilevel'
+import EWpatch from  '../components/5EW/patch'
+
+
+
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -9,15 +16,41 @@ const routes = [
     name: 'Home',
   },
 
-  
   // {
-  //   path: '/about',
-  //   name: 'About',
-  //   // route level code-splitting
-  //   // this generates a separate chunk (about.[hash].js) for this route
-  //   // which is lazy-loaded when the route is visited.
-  //   component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  // }
+  //   path: '/',
+  //   name: 'Home',
+  // },
+
+  // {
+  //   path: '/a-realm-reborn',
+  //   name: 'Endwalker',
+  // },
+
+  // {
+  //   path: '/endwalker',
+  //   name: 'Endwalker',
+  // },
+
+  // {
+  //   path: '/endwalker',
+  //   name: 'Endwalker',
+  // },
+
+  {
+    path: '/endwalker',
+    name: 'Endwalker',
+    component: Endwalker
+  },
+  {
+    path: '/endwalker#ilevel',
+    name: 'Endwalker ilevel Progression',
+    component: EWilvl
+  },
+  {
+    path: '/endwalker#patch',
+    name: 'Endwalker Patch Progression',
+    component: EWpatch
+  }
 ]
 
 const router = new VueRouter({
