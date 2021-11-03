@@ -106,35 +106,20 @@ const routes = [
     children: [{
       name: 'endwalker',
       path: '',
+      alias: '/endwalker', 
       component: Endwalker
     }, {
       name: 'endwalker.ilevel',
       path: 'ilevel',
+      alias: '/endwalker/ilevel', 
       component: EWilvl
     }, {
       name: 'endwalker.patch',
       path: 'patch',
+      alias: '/endwalker/patch', 
       component: EWpatch
     }]
   },
-
-    {
-      path: '/endwalker',
-      component: EmptyRouterView,
-      children: [{
-        name: 'endwalker',
-        path: '',
-        component: Endwalker
-      }, {
-        name: 'endwalker.ilevel',
-        path: 'ilevel',
-        component: EWilvl
-      }, {
-        name: 'endwalker.patch',
-        path: 'patch',
-        component: EWpatch
-      }]
-}
 ]
 
 const router = new VueRouter({
