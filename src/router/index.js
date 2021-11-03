@@ -37,11 +37,11 @@ const routes = [
       component: ARealmReborn
     }, {
       name: 'a-realm-reborn.ilevel',
-      path: 'a-realm-reborn/ilevel',
+      path: 'ilevel',
       component: ARRilvl
     }, {
       name: 'a-realm-reborn.patch',
-      path: 'a-realm-reborn/patch',
+      path: 'patch',
       component: ARRpatch
     }]
   },
@@ -55,11 +55,11 @@ const routes = [
       component: Heavensward
     }, {
       name: 'heavensward.ilevel',
-      path: 'heavensward/ilevel',
+      path: 'ilevel',
       component: HWilvl
     }, {
       name: 'heavensward.patch',
-      path: 'heavensward/patch',
+      path: 'patch',
       component: HWpatch
     }]
   },
@@ -73,11 +73,11 @@ const routes = [
       component: Stormblood
     }, {
       name: 'stormblood.ilevel',
-      path: 'stormblood/ilevel',
+      path: 'ilevel',
       component: SBilvl
     }, {
       name: 'stormblood.patch',
-      path: 'stormblood/patch',
+      path: 'patch',
       component: SBpatch
     }]
   },
@@ -91,11 +91,11 @@ const routes = [
       component: Shadowbringers
     }, {
       name: 'shadowbringers.ilevel',
-      path: 'shadowbringers/ilevel',
+      path: 'ilevel',
       component: SHilvl
     }, {
       name: 'shadowbringers.patch',
-      path: 'shadowbringers/patch',
+      path: 'patch',
       component: SHpatch
     }]
   },
