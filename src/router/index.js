@@ -23,9 +23,6 @@ import ARealmReborn from  '../components/1ARR/overview'
 import ARRilvl from  '../components/1ARR/ilevel'
 import ARRpatch from  '../components/1ARR/patch'
 
-
-
-
 Vue.use(VueRouter)
 
 const routes = [
@@ -124,17 +121,6 @@ const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes,
-  watch: {
-    $route: function(current) {
-      const route = this.$router.options.routes.find(route => route.path === current.path)
-
-      if (route && Array.isArray(route.children)) {
-        this.children = route.children
-      } else if (route) {
-        this.children = []
-      }
-    }
-  }
 })
 
 

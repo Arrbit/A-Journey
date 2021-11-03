@@ -6,6 +6,8 @@
       flat
     >
       <v-container class="py-0 fill-height">
+        <v-btn text
+                  href="/">
         <v-img
           alt="SDS Logo"
           class="shrink mr-2"
@@ -13,7 +15,7 @@
           src="https://sleepingdragons.eu/wp-content/themes/New-Sleeping-Dragons/assets/logos/VectorRed_Transparent.png"
           transition="scale-transition"
           width="40"
-        />
+        /></v-btn>
 
 
         <v-btn
