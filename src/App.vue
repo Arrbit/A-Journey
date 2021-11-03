@@ -1,11 +1,13 @@
 <template>
-  <v-app>
-    <v-app-bar
+  <v-app id="app">
+        <v-app-bar
       app
       color="white"
-      light
+      flat
     >
-      <div class="d-flex align-center">
+      <v-container class="py-0 fill-height">
+        <v-btn text
+                  href="/">
         <v-img
           alt="SDS Logo"
           class="shrink mr-2"
@@ -13,21 +15,26 @@
           src="https://sleepingdragons.eu/wp-content/themes/New-Sleeping-Dragons/assets/logos/VectorRed_Transparent.png"
           transition="scale-transition"
           width="40"
-        />
+        /></v-btn>
 
-        SleepingDragons ilvl-helper
 
-      </div>
-
-      <v-spacer></v-spacer>
-
+        <v-btn
+          v-for="links in hlinks"
+          :key="links.text"
+          text
+          :href="links.href"
+        >
+          {{ links.text }}
+        </v-btn>
+        <v-spacer></v-spacer>
+      </v-container>
     </v-app-bar>
 
-    <v-main>
-      <ilvl/>
-    </v-main>
+    <router-view/>
 
-     <v-footer
+
+
+    <v-footer
       padless="padless"
     >
       <v-card
@@ -38,13 +45,13 @@
       >
         <v-card-text>
           <v-btn
-            v-for="flinks in flinks"
-            :key="flinks"
+            v-for="links in flinks"
+            :key="links.text"
             text
             class="mx-4"
-            :href="flinks.href"
+            :href="links.href"
           >
-          {{ flinks.text }}
+          {{ links.text }}
           </v-btn>
         </v-card-text>
 
@@ -61,16 +68,19 @@
 </template>
 
 <script>
-import ilvl from './components/ilvl';
 
 export default {
   name: 'App',
 
-  components: {
-    ilvl,
-  },
-
   data: () => ({
+        hlinks: [
+       {text: 'Home', href: 'https://sleepingdragons.eu/' },
+       {text: 'Events', href: 'https://sleepingdragons.eu/upcoming-events/' },
+       {text: 'Guides', href: 'https://sleepingdragons.eu/guides/' },
+       {text: 'Letters', href: 'https://sleepingdragons.eu/letter/' },
+       {text: 'Members', href: 'https://sleepingdragons.eu/members/' },
+       {text: 'Discord', href: 'https://discord.com/invite/4xh39AD' },
+      ],
     flinks: [
        {text: 'Legal Disclosure', href: 'https://sleepingdragons.eu/contact/' },
        {text: 'Privacy Policy', href: 'https://sleepingdragons.eu/privacypolicy/' },
