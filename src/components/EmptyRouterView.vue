@@ -9,7 +9,7 @@
                              v-for="xpacs in xpacs"
                              :key="xpacs"
                              :to="xpacs.route"
-                             v-on:click="setXpac('test')"
+                             v-on:click="setXpac()"
                              link>
                                 <v-list-item-content>
                                     <v-list-item-title>
