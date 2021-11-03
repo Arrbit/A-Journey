@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 import EmptyRouterView from  '../components/EmptyRouterView'
+import PageNotFound from  '../components/PageNotFound'
 
 import Endwalker from  '../components/5EW/overview'
 import EWilvl from  '../components/5EW/ilevel'
@@ -26,6 +27,7 @@ import ARRpatch from  '../components/1ARR/patch'
 Vue.use(VueRouter)
 
 const routes = [
+  { path: "*", component: PageNotFound },
   {
     path: '/a-realm-reborn',
     component: EmptyRouterView,
@@ -85,7 +87,7 @@ const routes = [
     component: EmptyRouterView,
     children: [{
       name: 'shadowbringers',
-      path: '',
+      path: '/shadowbringers',
       component: Shadowbringers
     }, {
       name: 'shadowbringers.ilevel',
