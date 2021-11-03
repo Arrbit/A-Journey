@@ -19,12 +19,12 @@
 
 
         <v-btn
-          v-for="hlinks in hlinks"
-          :key="hlinks"
+          v-for="links in hlinks"
+          :key="links.text"
           text
-          :href="hlinks.href"
+          :href="links.href"
         >
-          {{ hlinks.text }}
+          {{ links.text }}
         </v-btn>
         <v-spacer></v-spacer>
       </v-container>
@@ -45,13 +45,13 @@
       >
         <v-card-text>
           <v-btn
-            v-for="flinks in flinks"
-            :key="flinks"
+            v-for="links in flinks"
+            :key="links.text"
             text
             class="mx-4"
-            :href="flinks.href"
+            :href="links.href"
           >
-          {{ flinks.text }}
+          {{ links.text }}
           </v-btn>
         </v-card-text>
 
