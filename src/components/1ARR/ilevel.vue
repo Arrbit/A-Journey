@@ -1,5 +1,5 @@
 <template>
    <div>
-    Endwalker ilvl
+    a realm reborn ilvl
    </div>
 </template>
