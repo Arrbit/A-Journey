@@ -1,5 +1,5 @@
 <template>
    <div>
-    Heavensward overview
+    Endwalker ilvl
    </div>
 </template>

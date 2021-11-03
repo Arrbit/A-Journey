@@ -28,57 +28,9 @@
       </v-container>
     </v-app-bar>
 
-    <v-main class="grey lighten-3">
-      <v-container>
-        <v-row>
-          <v-col cols="2">
-            <v-sheet rounded="lg">
-              <v-list color="transparent">
-                <v-list-item
-                  v-for="xpacs in xpacs"
-                  :key="xpacs"
-                  :to="xpacs.route"
-                  link
-                >
-                  <v-list-item-content>
-                    <v-list-item-title>
-                      {{xpacs.text}}
-                    </v-list-item-title>
-                  </v-list-item-content>
-                </v-list-item>
-
-                <v-divider class="my-2"></v-divider>
-
-                  <v-list-item
-                  v-for="modes in modes"
-                  :key="modes"
-                  :to="modes.route"
-                  link
-                >
-                  <v-list-item-content>
-                    <v-list-item-title>
-                    {{modes.text}}
-                    </v-list-item-title>
-                  </v-list-item-content>
-                </v-list-item>
-
-              </v-list>
-            </v-sheet>
-          </v-col>
-
-          <v-col>
-            <v-sheet
-              min-height="70vh"
-              rounded="lg"
-            >
-
     <router-view/>
 
-                </v-sheet>
-          </v-col>
-        </v-row>
-      </v-container>
-    </v-main>
+
 
     <v-footer
       padless="padless"
@@ -132,18 +84,6 @@ export default {
        {text: 'Privacy Policy', href: 'https://sleepingdragons.eu/privacypolicy/' },
        {text: 'Netlifys GDPR', href: 'https://www.netlify.com/gdpr-ccpa/' },
        {text: 'Contact', href: 'https://sleepingdragons.eu/contact/' },
-      ],
-      xpacs: [
-       {text: 'A Realm Reborn', route: '/a-realm-reborn' },
-       {text: 'Heavensward', href: 'https://sleepingdragons.eu/privacypolicy/' },
-       {text: 'Stormblood', href: 'https://www.netlify.com/gdpr-ccpa/' },
-       {text: 'Shadowbringer', href: 'https://sleepingdragons.eu/contact/' },
-      {text: 'Endwalker', route: '/endwalker' },
-      ],
-      modes: [
-       {text: 'Overview', route: '#' },
-       {text: 'Level Progression', route: '#ilevel' },
-       {text: 'Patch Progression', route: '#patch' },
       ],
   }),
 };
