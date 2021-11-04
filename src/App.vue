@@ -1,70 +1,63 @@
 <template>
-  <v-app id="app">
-        <v-app-bar
-      app
-      color="white"
-      flat
-    >
-      <v-container class="py-0 fill-height">
-        <v-btn text
-                  href="/">
+<v-app id="app">
+
+  <v-app-bar
+  app
+  color="white"
+  flat>
+    <v-container class="py-0 fill-height">
+      <v-btn text href="/">
         <v-img
-          alt="SDS Logo"
-          class="shrink mr-2"
-          contain
-          src="https://sleepingdragons.eu/wp-content/themes/New-Sleeping-Dragons/assets/logos/VectorRed_Transparent.png"
-          transition="scale-transition"
-          width="40"
-        /></v-btn>
+        alt="SDS Logo"
+        class="shrink mr-2"
+        contain
+        src="https://sleepingdragons.eu/wp-content/themes/New-Sleeping-Dragons/assets/logos/VectorRed_Transparent.png"
+        transition="scale-transition"
+        width="40"
+        />
+      </v-btn>
 
 
-        <v-btn
-          v-for="links in hlinks"
-          :key="links.text"
-          text
-          :href="links.href"
-        >
-          {{ links.text }}
-        </v-btn>
-        <v-spacer></v-spacer>
-      </v-container>
-    </v-app-bar>
+      <v-btn
+      v-for="links in hlinks"
+      :key="links.text"
+      text
+      :href="links.href">
+      {{ links.text }}
+      </v-btn>
+      <v-spacer/>
+    </v-container>
+  </v-app-bar>
 
-    <router-view/>
+  <router-view/>
 
+  <v-footer padless>
+    <v-card
+      flat
+      tile
+      width="100%"
+      class="text-center black--text">
 
+      <v-btn
+        v-for="links in flinks"
+        :key="links.text"
+        :href="links.href"
+        text
+        small
+        rounded
+        class="my-2">
+      {{ links.text }}
+      </v-btn>
 
-    <v-footer
-      padless="padless"
-    >
-      <v-card
-        flat
-        tile
-        width="100%"
-        class="grey lighten-1 text-center black--text"
-      >
-        <v-card-text>
-          <v-btn
-            v-for="links in flinks"
-            :key="links.text"
-            text
-            class="mx-4"
-            :href="links.href"
-          >
-          {{ links.text }}
-          </v-btn>
-        </v-card-text>
+    <v-divider/>
 
-        <v-divider></v-divider>
+      <v-card-text class="black--text">
+        Hosted by Netlify | {{ new Date().getFullYear() }} — <strong>SleepingDragons</strong>
+      </v-card-text>
+    </v-card>
+  </v-footer>
 
-        <v-card-text class="black--text">
-          {{ new Date().getFullYear() }} — <strong>SleepingDragons</strong>
-        </v-card-text>
-      </v-card>
-    </v-footer>
-
-
-  </v-app>
+</v-app>
 </template>
 
 <script>
@@ -85,7 +78,6 @@ export default {
        {text: 'Legal Disclosure', href: 'https://sleepingdragons.eu/contact/' },
        {text: 'Privacy Policy', href: 'https://sleepingdragons.eu/privacypolicy/' },
        {text: 'Netlifys GDPR', href: 'https://www.netlify.com/gdpr-ccpa/' },
-       {text: 'Contact', href: 'https://sleepingdragons.eu/contact/' },
       ],
   }),
 };
