@@ -565,7 +565,7 @@
                   v-on="on"
                   src="https://sleepingdragons.eu/wp-content/uploads/2020/05/trial-1.png" />
               </template>
-              <span>The Cloud Deck (Weapon)</span>
+              <span>The Cloud Deck (Extreme) (Weapon)</span>
             </v-tooltip>
           </td>
         </tr>

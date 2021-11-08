@@ -357,7 +357,7 @@
                            style="display: grid; justify-content: center; height: 100%;"
                            >
                            <v-card-text class="pb-0">
-                              The Copied Factory (Alliance Raid)<br />The Minstrel's Ballad: Hades's Elegy (Weapon) (iLvl 465)
+                              The Copied Factory<br />The Minstrel's Ballad: Hades's Elegy (Weapon) (iLvl 465)
                            </v-card-text>
                            <v-card-actions class="pt-1" style="justify-self: center;">
                               <v-btn
@@ -649,7 +649,7 @@
                               style="display: grid; justify-content: center; height: 100%;"
                               >
                               <v-card-text class="pb-0">
-                                The Puppets' Bunker (Alliance Raid)<br/>The Seat of Sacrifice (Extreme) (Weapon) (iLvl 495)
+                                The Puppets' Bunker<br/>The Seat of Sacrifice (Extreme) (Weapon) (iLvl 495)
                               </v-card-text>
                               <v-card-actions class="pt-1" style="justify-self: center;">
                                   <v-btn
@@ -941,7 +941,7 @@
                               style="display: grid; justify-content: center; height: 100%;"
                               >
                               <v-card-text class="pb-0">
-                                The Tower at Paradigm's Breach (Alliance Raid) (Weekly)<br/>The Cloud Deck (Weapon) (iLvl 525)
+                                The Tower at Paradigm's Breach (Weekly)<br/>The Cloud Deck (Extreme) (Weapon) (iLvl 525)
                               </v-card-text>
                               <v-card-actions class="pt-1" style="justify-self: center;">
                                   <v-btn

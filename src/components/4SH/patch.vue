@@ -315,7 +315,7 @@
                           style="display: grid; justify-content: center; height: 100%;"
                           >
                             <v-card-text class="pb-0">
-                              The Copied Factory (Alliance Raid)
+                              The Copied Factory
                             </v-card-text>
                             <v-card-actions class="pt-1" style="justify-self: center;">
                               <v-btn
@@ -711,7 +711,7 @@
                           style="display: grid; justify-content: center; height: 100%;"
                           >
                             <v-card-text class="pb-0">
-                              The Puppets' Bunker (Alliance Raid)
+                              The Puppets' Bunker
                             </v-card-text>
                             <v-card-actions class="pt-1" style="justify-self: center;">
                               <v-btn
@@ -1103,7 +1103,7 @@
                           style="display: grid; justify-content: center; height: 100%;"
                           >
                             <v-card-text class="pb-0">
-                              The Tower at Paradigm's Breach (Alliance Raid) (Weekly)
+                              The Tower at Paradigm's Breach (Weekly)
                             </v-card-text>
                             <v-card-actions class="pt-1" style="justify-self: center;">
                               <v-btn
@@ -1124,7 +1124,7 @@
                             <v-card-title>525 iLvl</v-card-title>
                             <v-img
                               style= "max-width: max-content; justify-self: center;"
-                              src="https://sleepingdragons.eu/wp-content/uploads/2020/05/trial-1.png"
+                              src="w://sleepingdragons.eu/wp-content/uploads/2020/05/trial-1.png"
                           ></v-img>
                           <v-card-actions class="pt-1" style="justify-self: center;">
                             <v-btn
@@ -1143,7 +1143,7 @@
                           style="display: grid; justify-content: center; height: 100%;"
                           >
                             <v-card-text class="pb-0">
-                              The Cloud Deck (Weapon)
+                              The Cloud Deck (Extreme) (Weapon)
                             </v-card-text>
                             <v-card-actions class="pt-1" style="justify-self: center;">
                               <v-btn
