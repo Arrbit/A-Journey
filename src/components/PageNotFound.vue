@@ -66,7 +66,7 @@
                         route: '/stormblood'
                     },
                     {
-                        text: 'Shadowbringer',
+                        text: 'Shadowbringers',
                         route: '/shadowbringers'
                     },
                     {

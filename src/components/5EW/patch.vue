@@ -1,5 +1,6 @@
 <template>
     <v-sheet
+    style="background-color: unset;"
               min-height="70vh"
               rounded="lg"
             >
@@ -241,7 +242,7 @@
                   </v-expansion-panel-content>
                 </v-expansion-panel>
                 <v-expansion-panel>
-                <v-expansion-panel-header class="text-h6  text-center">
+                <v-expansion-panel-header class="text-h6  text-center" @click="reveal = false; reveal2 = false; reveal3 = false; reveal4 = false; reveal5 = false; reveal6 = false;">
                     6.1
                   </v-expansion-panel-header>
                   <v-expansion-panel-content>
@@ -371,7 +372,7 @@
                   </v-expansion-panel-content>
                 </v-expansion-panel>
               <v-expansion-panel>
-                <v-expansion-panel-header class="text-h6  text-center">
+                <v-expansion-panel-header class="text-h6  text-center" @click="reveal = false; reveal2 = false; reveal3 = false; reveal4 = false; reveal5 = false; reveal6 = false;">
                     6.2
                   </v-expansion-panel-header>
                   <v-expansion-panel-content>
@@ -633,7 +634,7 @@
                   </v-expansion-panel-content>
                 </v-expansion-panel>
               <v-expansion-panel>
-                <v-expansion-panel-header class="text-h6  text-center">
+                <v-expansion-panel-header class="text-h6  text-center" @click="reveal = false; reveal2 = false; reveal3 = false; reveal4 = false; reveal5 = false; reveal6 = false;">
                     6.3
                   </v-expansion-panel-header>
                   <v-expansion-panel-content>
@@ -763,7 +764,7 @@
                   </v-expansion-panel-content>
                 </v-expansion-panel>
                  <v-expansion-panel>
-                <v-expansion-panel-header class="text-h6  text-center">
+                <v-expansion-panel-header class="text-h6  text-center" @click="reveal = false; reveal2 = false; reveal3 = false; reveal4 = false; reveal5 = false; reveal6 = false;">
                     6.4
                   </v-expansion-panel-header>
                   <v-expansion-panel-content>
@@ -1025,7 +1026,7 @@
                   </v-expansion-panel-content>
                 </v-expansion-panel>
                  <v-expansion-panel>
-                <v-expansion-panel-header class="text-h6  text-center">
+                <v-expansion-panel-header class="text-h6  text-center" @click="reveal = false; reveal2 = false; reveal3 = false; reveal4 = false; reveal5 = false; reveal6 = false;">
                     6.5
                   </v-expansion-panel-header>
                   <v-expansion-panel-content>

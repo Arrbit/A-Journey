@@ -1,5 +1,6 @@
 <template>
     <v-sheet
+    style="background-color: unset;"
               min-height="70vh"
               rounded="lg"
             >
@@ -129,7 +130,7 @@
                               style="display: grid; justify-content: center; height: 100%;"
                               >
                               <v-card-text class="pb-0">
-                                  EX Trial (Weapon + Accessories)
+                                  Dungeon Gear
                               </v-card-text>
                               <v-card-actions class="pt-1" style="justify-self: center;">
                                   <v-btn
@@ -299,7 +300,7 @@
                            style="display: grid; justify-content: center; height: 100%;"
                            >
                            <v-card-text class="pb-0">
-                              EX Trial (Weapon + Accessories)
+                              Dungeon Gear
                            </v-card-text>
                            <v-card-actions class="pt-1" style="justify-self: center;">
                               <v-btn

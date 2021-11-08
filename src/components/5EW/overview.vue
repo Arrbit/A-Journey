@@ -55,6 +55,13 @@
               <span>Dungeon Gear</span>
             </v-tooltip> 
           </td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
         </tr>
         <tr> 
           <td>570</td>
@@ -69,6 +76,13 @@
               <span>Tomestone Gear</span>
             </v-tooltip>
           </td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
         </tr>
         <tr> 
           <td>575</td>
@@ -86,6 +100,10 @@
               <span>Dungeon Gear</span>
             </v-tooltip>
           </td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
         </tr>
         <tr> 
           <td>580</td>
@@ -122,6 +140,11 @@
               <span>Crafted Gear</span>
             </v-tooltip>
           </td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
         </tr>
         <tr> 
           <td>585</td>
@@ -140,6 +163,9 @@
               <span>Dungeon Gear</span>
             </v-tooltip>
           </td>
+          <td></td>
+          <td></td>
+          <td></td>
         </tr>
         <tr> 
           <td>590</td>
@@ -178,6 +204,9 @@
               <span>Tomestone Gear (Unlimited)</span>
             </v-tooltip>
           </td>
+          <td></td>
+          <td></td>
+          <td></td>
         </tr>
         <tr> 
           <td>595</td>
@@ -195,6 +224,10 @@
               <span>EX Trial (Weapon)</span>
             </v-tooltip>
           </td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
         </tr>
         <tr> 
           <td>600</td>
@@ -220,6 +253,11 @@
               <span>Upgraded Tomestone Gear</span>
             </v-tooltip>
           </td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
         </tr>
         <tr> 
           <td>605</td>
@@ -249,6 +287,8 @@
             <span>Dungeon Gear</span>
           </v-tooltip>
           </td>
+          <td></td>
+          <td></td>
         </tr>
         <tr> 
           <td>610</td>
@@ -276,6 +316,9 @@
             <span>Crafted Gear</span>
           </v-tooltip>
           </td>
+          <td></td>
+          <td></td>
+          <td></td>
         </tr>
         <tr> 
           <td>615</td>
@@ -306,6 +349,7 @@
               <span>Dungeon Gear</span>
             </v-tooltip>
           </td>
+          <td></td>
         </tr>
         <tr> 
           <td>620</td>
@@ -346,6 +390,7 @@
               <span>Tomestone Gear (Unlimited)</span>
             </v-tooltip>
           </td>
+          <td></td>
         </tr>
         <tr> 
           <td>625</td>
@@ -365,6 +410,8 @@
               <span>EX Trial (Weapon)</span>
             </v-tooltip>
           </td>
+          <td></td>
+          <td></td>
         </tr>
         <tr> 
           <td>630</td>
@@ -392,6 +439,9 @@
               <span>Upgraded Tomestone Gear</span>
             </v-tooltip>
           </td>
+          <td></td>
+          <td></td>
+          <td></td>
         </tr>
         <tr> 
           <td>635</td>
@@ -452,6 +502,7 @@
               <span>Crafted Gear</span>
             </v-tooltip>
           </td>
+          <td></td>
         </tr>
         <tr> 
           <td>645</td>
@@ -472,6 +523,7 @@
               <span>EX Trial (Weapon)</span>
             </v-tooltip>
           </td>
+          <td></td>
         </tr>
         <tr> 
           <td>650</td>
@@ -554,6 +606,7 @@
               <span>Upgraded Tomestone Gear</span>
             </v-tooltip>
           </td>
+          <td></td>
         </tr>
         <tr> 
           <td>665</td>
@@ -574,6 +627,7 @@
               <span>Savage Raid Weapon</span>
             </v-tooltip>
           </td>
+          <td></td>
         </tr>
       </tbody>
     </template>

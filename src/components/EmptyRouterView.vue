@@ -37,10 +37,8 @@
                 </v-col>
 
                 <v-col>
-                    <v-sheet min-height="70vh" rounded="lg">
-                        {{this.currentxpac}}
+                    <v-sheet style="background-color: unset;" rounded="lg">
                         <router-view />
-
                     </v-sheet>
                 </v-col>
             </v-row>
@@ -59,7 +57,7 @@ export default {
             {text: 'A Realm Reborn', route: '/a-realm-reborn'},
             {text: 'Heavensward', route: '/heavensward'},
             {text: 'Stormblood',route: '/stormblood'},
-            {text: 'Shadowbringer',route: '/shadowbringers'},
+            {text: 'Shadowbringers',route: '/shadowbringers'},
             {text: 'Endwalker',route: '/endwalker'}]}
         ),
 
