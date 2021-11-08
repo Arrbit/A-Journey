@@ -1124,7 +1124,7 @@
                             <v-card-title>525 iLvl</v-card-title>
                             <v-img
                               style= "max-width: max-content; justify-self: center;"
-                              src="w://sleepingdragons.eu/wp-content/uploads/2020/05/trial-1.png"
+                              src="https://sleepingdragons.eu/wp-content/uploads/2020/05/trial-1.png"
                           ></v-img>
                           <v-card-actions class="pt-1" style="justify-self: center;">
                             <v-btn
