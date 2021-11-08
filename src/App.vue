@@ -1,20 +1,45 @@
 <template>
 <v-app id="app">
+     <v-navigation-drawer class="d-sm-block d-block d-md-flex" v-model="header" absolute temporary>
+            <v-list nav dense>
+                <v-list-item  v-for="links in hlinks" :key="links.text" text :href="links.href">
+                    <v-list-item-content>
+                        <v-list-item-title>
+                           {{ links.text }}
+                                <v-icon v-if="!hlinks.icon"> {{ links.icon }} </v-icon>
+
+                        </v-list-item-title>
+                    </v-list-item-content>
+                </v-list-item>
+
+                <v-divider class="my-2"></v-divider>
+
+                <v-list-item v-for="mode in modes" :key="mode.text" :to="currentxpac + mode.route" link>
+                    <v-list-item-content>
+                        <v-list-item-title>
+                            {{mode.text}}
+                        </v-list-item-title>
+                    </v-list-item-content>
+                </v-list-item>
+
+            </v-list>
+        </v-navigation-drawer>
 
     <v-app-bar app class="lighten-4 grey black--text" dense>
-        <v-container class="py-0 fill-height">
+          <v-spacer />
 
-            <v-spacer />
-            <v-btn v-for="links in hlinks" :key="links.text" text :href="links.href">
+            <v-btn class="d-sm-none d-none d-md-flex" v-for="links in hlinks" :key="links.text" text :href="links.href">
                 {{ links.text }}
                 <v-icon v-if="!hlinks.icon"> {{ links.icon }} </v-icon>
             </v-btn>
             <v-spacer />
-        </v-container>
+            <v-app-bar-nav-icon class="float-right d-sm-block d-block d-md-none" @click="header = true"></v-app-bar-nav-icon>
     </v-app-bar>
+
     <router-view />
 
     <v-footer padless>
+
         <v-card flat tile width="100%" class="lighten-4 grey text-center black--text">
 
             <v-btn v-for="links in flinks" :key="links.text" :href="links.href" text small rounded class="my-2">
@@ -37,6 +62,7 @@ export default {
     name: 'App',
 
     data: () => ({
+        header: false,
         hlinks: [{
                 text: 'Home',
                 href: 'https://sleepingdragons.eu/'
