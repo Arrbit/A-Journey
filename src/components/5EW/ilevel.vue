@@ -4,6 +4,9 @@
               min-height="70vh"
               rounded="lg"
             >
+            <v-card-title style="justify-content: center;" class="text-caption">
+            Endwalker Information is based on past expansions' content cycle and will be updated as information comes out
+            </v-card-title>
               <v-expansion-panels accordion>
                 <v-expansion-panel>
                   <v-expansion-panel-header class="text-h6  text-center" @click="reveal = false">

@@ -1,4 +1,12 @@
 <template>
+  <v-sheet
+  style="background-color: unset;"
+  min-height="70vh"
+  rounded="lg"
+  >
+  <v-card-title style="justify-content: center;" class="text-caption">
+  Endwalker Information is based on past expansions' content cycle and will be updated as information comes out
+  </v-card-title>
   <v-simple-table>
     <template v-slot:default>
       <thead>
@@ -632,4 +640,5 @@
       </tbody>
     </template>
   </v-simple-table>
+    </v-sheet>
 </template>

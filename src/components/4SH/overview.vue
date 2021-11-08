@@ -544,7 +544,7 @@
                   v-on="on"
                   src="https://sleepingdragons.eu/wp-content/uploads/2020/05/raid.png" />
               </template>
-              <span>The Tower at Paradigm's Breach (Weekly)</span>
+              <span>The Tower at Paradigm's Breach</span>
             </v-tooltip>
           </td>
         </tr>
