@@ -1,4 +1,4 @@
-# my-app
+# SDS Ilvl-Helper
 
 ## Project setup
 ```
