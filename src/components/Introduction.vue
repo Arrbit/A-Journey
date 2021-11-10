@@ -1,5 +1,5 @@
 <template>
     <v-card>
-        page not found
+        intro!
     </v-card>
 </template>
