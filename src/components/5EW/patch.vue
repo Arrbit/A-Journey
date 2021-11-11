@@ -22,12 +22,12 @@
                               <v-img
                                 contain
                                 style= "max-width: max-content; justify-self: center;"
-                                src="https://sleepingdragons.eu/wp-content/uploads/2020/05/quest_Icon.png"
+                                :src="images.quest"
                               ></v-img>
                               <v-img
                                 contain
                                 style= "max-width: max-content; justify-self: center;"
-                                src="https://sleepingdragons.eu/wp-content/uploads/2020/05/dungeon-1.png"
+                                :src="images.dungeon"
                             ></v-img>
                            </div>
                            <v-card-actions class="pt-1" style="justify-self: center;">
@@ -68,7 +68,7 @@
                         <v-card-title>570 iLvl</v-card-title>
                           <v-img
                             style= "max-width: max-content; justify-self: center;"
-                            src="https://sleepingdragons.eu/wp-content/uploads/2020/05/roulette.png"
+                            :src="images.tomestone"
                           ></v-img>
                       <v-card-actions class="pt-1" style="justify-self: center;">
                            <v-btn
@@ -109,15 +109,15 @@
                          <div class="d-flex flex-row" style="justify-content: center;">
                           <v-img
                             style= "max-width: max-content; justify-self: center;"
-                            src="https://sleepingdragons.eu/wp-content/uploads/2020/05/trial-1.png"
+                            :src="images.trial"
                           ></v-img>
                           <v-img
                             style= "max-width: max-content; justify-self: center;"
-                            src="https://sleepingdragons.eu/wp-content/uploads/2020/05/raid.png"
+                            :src="images.raid"
                           ></v-img>
                           <v-img
                             style= "max-width: max-content; justify-self: center;"
-                            src="https://sleepingdragons.eu/wp-content/uploads/2020/05/crafted-1.png"
+                            :src="images.crafted"
                           ></v-img>
                         </div>
                       <v-card-actions class="pt-1" style="justify-self: center;">
@@ -159,7 +159,7 @@
                          <div class="d-flex flex-row" style="justify-content: center;">
                           <v-img
                             style= "max-width: max-content; justify-self: center;"
-                            src="https://sleepingdragons.eu/wp-content/uploads/2020/05/roulette.png"
+                            :src="images.tomestone"
                           ></v-img>
                         </div>
                       <v-card-actions class="pt-1" style="justify-self: center;">
@@ -201,11 +201,11 @@
                          <div class="d-flex flex-row" style="justify-content: center;">
                           <v-img
                             style= "max-width: max-content; justify-self: center;"
-                            src="https://sleepingdragons.eu/wp-content/uploads/2020/05/roulette.png"
+                            :src="images.tomestone"
                           ></v-img>
                           <v-img
                             style= "max-width: max-content; justify-self: center;"
-                            src="https://sleepingdragons.eu/wp-content/uploads/2020/05/realraid.png"
+                            :src="images.savage"
                           ></v-img>
                         </div>
                       <v-card-actions class="pt-1" style="justify-self: center;">
@@ -256,7 +256,7 @@
                             <v-card-title>575 iLvl</v-card-title>
                             <v-img
                               style= "max-width: max-content; justify-self: center;"
-                              src="https://sleepingdragons.eu/wp-content/uploads/2020/05/dungeon-1.png"
+                              :src="images.dungeon"
                             ></v-img>
                             <v-card-actions class="pt-1" style="justify-self: center;">
                                 <v-btn
@@ -296,7 +296,7 @@
                             <v-card-title>590 iLvl</v-card-title>
                             <v-img
                               style= "max-width: max-content; justify-self: center;"
-                              src="https://sleepingdragons.eu/wp-content/uploads/2020/05/raid.png"
+                              :src="images.raid"
                            ></v-img>
                           <v-card-actions class="pt-1" style="justify-self: center;">
                             <v-btn
@@ -336,7 +336,7 @@
                             <v-card-title>595 iLvl</v-card-title>
                             <v-img
                               style= "max-width: max-content; justify-self: center;"
-                              src="https://sleepingdragons.eu/wp-content/uploads/2020/05/trial-1.png"
+                              :src="images.trial"
                           ></v-img>
                           <v-card-actions class="pt-1" style="justify-self: center;">
                             <v-btn
@@ -386,7 +386,7 @@
                             <v-card-title>585 iLvl</v-card-title>
                             <v-img
                               style= "max-width: max-content; justify-self: center;"
-                              src="https://sleepingdragons.eu/wp-content/uploads/2020/05/dungeon-1.png"
+                              :src="images.dungeon"
                             ></v-img>
                             <v-card-actions class="pt-1" style="justify-self: center;">
                                 <v-btn
@@ -426,7 +426,7 @@
                             <v-card-title>590 iLvl</v-card-title>
                             <v-img
                               style= "max-width: max-content; justify-self: center;"
-                              src="https://sleepingdragons.eu/wp-content/uploads/2020/05/roulette.png"
+                              :src="images.tomestone"
                             ></v-img>
                           <v-card-actions class="pt-1" style="justify-self: center;">
                             <v-btn
@@ -467,11 +467,11 @@
                             <div class="d-flex flex-row" style="justify-content: center;">
                               <v-img
                                 style= "max-width: max-content; justify-self: center;"
-                                src="https://sleepingdragons.eu/wp-content/uploads/2020/05/raid.png"
+                                :src="images.raid"
                               ></v-img>
                               <v-img
                                   style= "max-width: max-content; justify-self: center;"
-                                  src="https://sleepingdragons.eu/wp-content/uploads/2020/05/crafted-1.png"
+                                  :src="images.crafted"
                               ></v-img>
                             </div>
                           <v-card-actions class="pt-1" style="justify-self: center;">
@@ -512,7 +512,7 @@
                             <v-card-title>615 iLvl</v-card-title>
                               <v-img
                                 style= "max-width: max-content; justify-self: center;"
-                                src="https://sleepingdragons.eu/wp-content/uploads/2020/05/trial-1.png"
+                                :src="images.trial"
                               ></v-img>
                           <v-card-actions class="pt-1" style="justify-self: center;">
                             <v-btn
@@ -552,7 +552,7 @@
                             <v-card-title>620 iLvl</v-card-title>
                               <v-img
                                 style= "max-width: max-content; justify-self: center;"
-                                src="https://sleepingdragons.eu/wp-content/uploads/2020/05/roulette.png"
+                                :src="images.tomestone"
                               ></v-img>
                           <v-card-actions class="pt-1" style="justify-self: center;">
                             <v-btn
@@ -593,11 +593,11 @@
                             <div class="d-flex flex-row" style="justify-content: center;">
                               <v-img
                                 style= "max-width: max-content; justify-self: center;"
-                                src="https://sleepingdragons.eu/wp-content/uploads/2020/05/realraid.png"
+                                :src="images.savage"
                               ></v-img>
                               <v-img
                                   style= "max-width: max-content; justify-self: center;"
-                                  src="https://sleepingdragons.eu/wp-content/uploads/2020/05/roulette.png"
+                                  :src="images.tomestone"
                               ></v-img>
                             </div>
                           <v-card-actions class="pt-1" style="justify-self: center;">
@@ -648,7 +648,7 @@
                             <v-card-title>605 iLvl</v-card-title>
                             <v-img
                               style= "max-width: max-content; justify-self: center;"
-                              src="https://sleepingdragons.eu/wp-content/uploads/2020/05/dungeon-1.png"
+                              :src="images.dungeon"
                             ></v-img>
                             <v-card-actions class="pt-1" style="justify-self: center;">
                                 <v-btn
@@ -688,7 +688,7 @@
                             <v-card-title>620 iLvl</v-card-title>
                             <v-img
                               style= "max-width: max-content; justify-self: center;"
-                              src="https://sleepingdragons.eu/wp-content/uploads/2020/05/raid.png"
+                              :src="images.raid"
                            ></v-img>
                           <v-card-actions class="pt-1" style="justify-self: center;">
                             <v-btn
@@ -728,7 +728,7 @@
                             <v-card-title>625 iLvl</v-card-title>
                             <v-img
                               style= "max-width: max-content; justify-self: center;"
-                              src="https://sleepingdragons.eu/wp-content/uploads/2020/05/trial-1.png"
+                              :src="images.trial"
                           ></v-img>
                           <v-card-actions class="pt-1" style="justify-self: center;">
                             <v-btn
@@ -778,7 +778,7 @@
                             <v-card-title>615 iLvl</v-card-title>
                             <v-img
                               style= "max-width: max-content; justify-self: center;"
-                              src="https://sleepingdragons.eu/wp-content/uploads/2020/05/dungeon-1.png"
+                              :src="images.dungeon"
                             ></v-img>
                             <v-card-actions class="pt-1" style="justify-self: center;">
                                 <v-btn
@@ -818,7 +818,7 @@
                             <v-card-title>620 iLvl</v-card-title>
                             <v-img
                               style= "max-width: max-content; justify-self: center;"
-                              src="https://sleepingdragons.eu/wp-content/uploads/2020/05/roulette.png"
+                              :src="images.tomestone"
                             ></v-img>
                           <v-card-actions class="pt-1" style="justify-self: center;">
                             <v-btn
@@ -859,11 +859,11 @@
                             <div class="d-flex flex-row" style="justify-content: center;">
                               <v-img
                                 style= "max-width: max-content; justify-self: center;"
-                                src="https://sleepingdragons.eu/wp-content/uploads/2020/05/raid.png"
+                                :src="images.raid"
                               ></v-img>
                               <v-img
-                                  style= "max-width: max-content; justify-self: center;"
-                                  src="https://sleepingdragons.eu/wp-content/uploads/2020/05/crafted-1.png"
+                                style= "max-width: max-content; justify-self: center;"
+                                :src="images.crafted"
                               ></v-img>
                             </div>
                           <v-card-actions class="pt-1" style="justify-self: center;">
@@ -904,7 +904,7 @@
                             <v-card-title>645 iLvl</v-card-title>
                               <v-img
                                 style= "max-width: max-content; justify-self: center;"
-                                src="https://sleepingdragons.eu/wp-content/uploads/2020/05/trial-1.png"
+                                :src="images.trial"
                               ></v-img>
                           <v-card-actions class="pt-1" style="justify-self: center;">
                             <v-btn
@@ -944,7 +944,7 @@
                             <v-card-title>650 iLvl</v-card-title>
                               <v-img
                                 style= "max-width: max-content; justify-self: center;"
-                                src="https://sleepingdragons.eu/wp-content/uploads/2020/05/roulette.png"
+                                :src="images.tomestone"
                               ></v-img>
                           <v-card-actions class="pt-1" style="justify-self: center;">
                             <v-btn
@@ -985,11 +985,11 @@
                             <div class="d-flex flex-row" style="justify-content: center;">
                               <v-img
                                 style= "max-width: max-content; justify-self: center;"
-                                src="https://sleepingdragons.eu/wp-content/uploads/2020/05/realraid.png"
+                                :src="images.savage"
                               ></v-img>
                               <v-img
-                                  style= "max-width: max-content; justify-self: center;"
-                                  src="https://sleepingdragons.eu/wp-content/uploads/2020/05/roulette.png"
+                                style= "max-width: max-content; justify-self: center;"
+                                :src="images.tomestone"
                               ></v-img>
                             </div>
                           <v-card-actions class="pt-1" style="justify-self: center;">
@@ -1040,7 +1040,7 @@
                             <v-card-title>635 iLvl</v-card-title>
                             <v-img
                               style= "max-width: max-content; justify-self: center;"
-                              src="https://sleepingdragons.eu/wp-content/uploads/2020/05/dungeon-1.png"
+                              :src="images.dungeon"
                             ></v-img>
                             <v-card-actions class="pt-1" style="justify-self: center;">
                                 <v-btn
@@ -1080,7 +1080,7 @@
                             <v-card-title>650 iLvl</v-card-title>
                             <v-img
                               style= "max-width: max-content; justify-self: center;"
-                              src="https://sleepingdragons.eu/wp-content/uploads/2020/05/raid.png"
+                              :src="images.raid"
                            ></v-img>
                           <v-card-actions class="pt-1" style="justify-self: center;">
                             <v-btn
@@ -1120,7 +1120,7 @@
                             <v-card-title>655 iLvl</v-card-title>
                             <v-img
                               style= "max-width: max-content; justify-self: center;"
-                              src="https://sleepingdragons.eu/wp-content/uploads/2020/05/trial-1.png"
+                              :src="images.trial"
                           ></v-img>
                           <v-card-actions class="pt-1" style="justify-self: center;">
                             <v-btn
@@ -1190,14 +1190,33 @@
 </style>
 
 <script>
+import dungeon from '../../assets/dungeon.png'
+import crafted from '../../assets/crafted.png'
+import quest from '../../assets/quest.png'
+import raid from '../../assets/raid.png'
+import savage from '../../assets/savage.png'
+import tomestone from '../../assets/tomestone.png'
+import trial from '../../assets/trial.png'
+
   export default {
-    data: () => ({
-      reveal: false,
-      reveal2: false,
-      reveal3: false,
-      reveal4: false,
-      reveal5: false,
-      reveal6: false
-    }),
+    data: () => {
+      return {
+        images: {
+          dungeon,
+          crafted,
+          quest,
+          raid,
+          savage,
+          tomestone,
+          trial,
+        },
+        reveal: false,
+        reveal2: false,
+        reveal3: false,
+        reveal4: false,
+        reveal5: false,
+        reveal6: false,
+      }
+    },
   }
 </script>
