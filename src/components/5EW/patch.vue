@@ -8,1154 +8,34 @@
             Endwalker Information is based on past expansions' content cycle and will be updated as information comes out
             </v-card-title>
               <v-expansion-panels accordion>
-                <v-expansion-panel>
+                <v-expansion-panel v-for="patch in patches" :key="patch">
                   <v-expansion-panel-header class="text-h6  text-center" @click="reveal = false; reveal2 = false; reveal3 = false; reveal4 = false; reveal5 = false; reveal6 = false;">
-                    6.0
+                    {{ patch.title }}
                   </v-expansion-panel-header>
                   <v-expansion-panel-content>
-                    <v-list>
-                       <v-row>
-                          <v-col>
-                           <v-card elevation="0" style="display: grid; justify-content: center;">
-                           <v-card-title>560 iLvl</v-card-title>
-                           <div class="d-flex flex-row" style="justify-content: center;">
-                              <v-img
-                                contain
-                                style= "max-width: max-content; justify-self: center;"
-                                :src="images.quest"
-                              ></v-img>
-                              <v-img
-                                contain
-                                style= "max-width: max-content; justify-self: center;"
-                                :src="images.dungeon"
-                            ></v-img>
-                           </div>
-                           <v-card-actions class="pt-1" style="justify-self: center;">
-                                 <v-btn
-                                 text
-                                 color="light-blue accent-4"
-                                 @click="reveal = true"
-                                 >
-                                 Learn More
-                                 </v-btn>
-                              </v-card-actions>
-                              <v-expand-transition>
-                                 <v-card
-                                 elevation="0"
-                                 v-if="reveal"
-                                 class="transition-fast-in-fast-out v-card--reveal"
-                                 style="display: grid; justify-content: center; height: 100%;"
-                                 >
-                                 <v-card-text class="pb-0">
-                                    Quest Gear<br/>Dungeon Gear
-                                 </v-card-text>
-                                 <v-card-actions class="pt-1" style="justify-self: center;">
-                                    <v-btn
-                                       text
-                                       color="light-blue accent-4"
-                                       @click="reveal = false"
-                                    >
-                                       Close
-                                    </v-btn>
-                                 </v-card-actions>
+                     <v-row>
+                        <v-col v-for="ilvl in patch.ilvls" :key="ilvl">
+                           <v-tooltip bottom>
+                              <template v-slot:activator="{ on, attrs }">
+                                 <v-card elevation="0" class="pb-5" style="display: grid; justify-content: center;" v-bind="attrs" v-on="on">
+                                  <v-card-title>{{ ilvl.number }} iLvl</v-card-title>
+                                    <div class="d-flex flex-row" style="justify-content: center;">
+                                       <div v-for="icon in ilvl.icons" :key="icon">
+                                       <v-img
+                                          contain
+                                          style= "max-width: max-content; justify-self: center;"
+                                          :src="icon.icon"
+                                       ></v-img>
+                                       </div>
+                                    </div>
                                  </v-card>
-                              </v-expand-transition>
-                           </v-card>
-                          </v-col>
-                      <v-divider vertical />
-                      <v-col>
-                      <v-card elevation="0" style="display: grid; justify-content: center;">
-                        <v-card-title>570 iLvl</v-card-title>
-                          <v-img
-                            style= "max-width: max-content; justify-self: center;"
-                            :src="images.tomestone"
-                          ></v-img>
-                      <v-card-actions class="pt-1" style="justify-self: center;">
-                           <v-btn
-                           text
-                           color="light-blue accent-4"
-                           @click="reveal2 = true"
-                           >
-                           Learn More
-                           </v-btn>
-                        </v-card-actions>
-                        <v-expand-transition>
-                           <v-card
-                           elevation="0"
-                           v-if="reveal2"
-                           class="transition-fast-in-fast-out v-card--reveal"
-                           style="display: grid; justify-content: center; height: 100%;"
-                           >
-                           <v-card-text class="pb-0">
-                              Tomestone Gear
-                           </v-card-text>
-                           <v-card-actions class="pt-1" style="justify-self: center;">
-                              <v-btn
-                                 text
-                                 color="light-blue accent-4"
-                                 @click="reveal2 = false"
-                              >
-                                 Close
-                              </v-btn>
-                           </v-card-actions>
-                           </v-card>
-                        </v-expand-transition>
-                      </v-card>
-                      </v-col>
-                      <v-divider vertical />
-                     <v-col>
-                      <v-card elevation="0" style="display: grid; justify-content: center;">
-                         <v-card-title>580 iLvl</v-card-title>
-                         <div class="d-flex flex-row" style="justify-content: center;">
-                          <v-img
-                            style= "max-width: max-content; justify-self: center;"
-                            :src="images.trial"
-                          ></v-img>
-                          <v-img
-                            style= "max-width: max-content; justify-self: center;"
-                            :src="images.raid"
-                          ></v-img>
-                          <v-img
-                            style= "max-width: max-content; justify-self: center;"
-                            :src="images.crafted"
-                          ></v-img>
-                        </div>
-                      <v-card-actions class="pt-1" style="justify-self: center;">
-                           <v-btn
-                           text
-                           color="light-blue accent-4"
-                           @click="reveal3 = true"
-                           >
-                           Learn More
-                           </v-btn>
-                        </v-card-actions>
-                        <v-expand-transition>
-                        <v-card
-                        elevation="0"
-                        v-if="reveal3"
-                        class="transition-fast-in-fast-out v-card--reveal"
-                        style="display: grid; justify-content: center; height: 100%;"
-                        >
-                        <v-card-text class="pb-0">
-                        EX Trial (Weapon + Accessories)<br/>Normal Raid 1-4 (Weekly) (Patch 6.01)<br/>Crafted Gear (Patch 6.05)
-                        </v-card-text>
-                        <v-card-actions class="pt-1" style="justify-self: center;">
-                           <v-btn
-                              text
-                              color="light-blue accent-4"
-                              @click="reveal3 = false"
-                           >
-                              Close
-                           </v-btn>
-                        </v-card-actions>
-                        </v-card>
-                     </v-expand-transition>
-                        </v-card>
-                      </v-col>
-                      <v-divider vertical />
-                     <v-col>
-                      <v-card elevation="0" style="display: grid; justify-content: center;">
-                         <v-card-title>590 iLvl</v-card-title>
-                         <div class="d-flex flex-row" style="justify-content: center;">
-                          <v-img
-                            style= "max-width: max-content; justify-self: center;"
-                            :src="images.tomestone"
-                          ></v-img>
-                        </div>
-                      <v-card-actions class="pt-1" style="justify-self: center;">
-                           <v-btn
-                           text
-                           color="light-blue accent-4"
-                           @click="reveal4 = true"
-                           >
-                           Learn More
-                           </v-btn>
-                        </v-card-actions>
-                        <v-expand-transition>
-                        <v-card
-                        elevation="0"
-                        v-if="reveal4"
-                        class="transition-fast-in-fast-out v-card--reveal"
-                        style="display: grid; justify-content: center; height: 100%;"
-                        >
-                        <v-card-text class="pb-0">
-                          Tomestone Gear (Weekly) (Patch 6.05)
-                        </v-card-text>
-                        <v-card-actions class="pt-1" style="justify-self: center;">
-                           <v-btn
-                              text
-                              color="light-blue accent-4"
-                              @click="reveal4 = false"
-                           >
-                              Close
-                           </v-btn>
-                        </v-card-actions>
-                        </v-card>
-                     </v-expand-transition>
-                        </v-card>
-                      </v-col>
-                       <v-divider vertical />
-                     <v-col>
-                      <v-card elevation="0" style="display: grid; justify-content: center;">
-                         <v-card-title>600 iLvl</v-card-title>
-                         <div class="d-flex flex-row" style="justify-content: center;">
-                          <v-img
-                            style= "max-width: max-content; justify-self: center;"
-                            :src="images.tomestone"
-                          ></v-img>
-                          <v-img
-                            style= "max-width: max-content; justify-self: center;"
-                            :src="images.savage"
-                          ></v-img>
-                        </div>
-                      <v-card-actions class="pt-1" style="justify-self: center;">
-                           <v-btn
-                           text
-                           color="light-blue accent-4"
-                           @click="reveal5 = true"
-                           >
-                           Learn More
-                           </v-btn>
-                        </v-card-actions>
-                        <v-expand-transition>
-                        <v-card
-                        elevation="0"
-                        v-if="reveal5"
-                        class="transition-fast-in-fast-out v-card--reveal"
-                        style="display: grid; justify-content: center; height: 100%;"
-                        >
-                        <v-card-text class="pb-0">
-                        Savage Raid Gear (Patch 6.05)<br/>Upgraded Tomestone Gear (Patch 6.05)<br/>Savage Raid Weapon (iLvl 605) (Patch 6.05)
-                        </v-card-text>
-                        <v-card-actions class="pt-1" style="justify-self: center;">
-                           <v-btn
-                              text
-                              color="light-blue accent-4"
-                              @click="reveal5 = false"
-                           >
-                              Close
-                           </v-btn>
-                        </v-card-actions>
-                        </v-card>
-                      </v-expand-transition>
-                      </v-card>
-                      </v-col>
-                    </v-row>
-                    </v-list>
-                  </v-expansion-panel-content>
-                </v-expansion-panel>
-                <v-expansion-panel>
-                <v-expansion-panel-header class="text-h6  text-center" @click="reveal = false; reveal2 = false; reveal3 = false; reveal4 = false; reveal5 = false; reveal6 = false;">
-                    6.1
-                  </v-expansion-panel-header>
-                  <v-expansion-panel-content>
-                    <v-list>
-                      <v-row>
-                        <v-col>
-                          <v-card elevation="0" style="display: grid; justify-content: center;">
-                            <v-card-title>575 iLvl</v-card-title>
-                            <v-img
-                              style= "max-width: max-content; justify-self: center;"
-                              :src="images.dungeon"
-                            ></v-img>
-                            <v-card-actions class="pt-1" style="justify-self: center;">
-                                <v-btn
-                                text
-                                color="light-blue accent-4"
-                                @click="reveal = true"
-                                >
-                                Learn More
-                                </v-btn>
-                              </v-card-actions>
-                              <v-expand-transition>
-                              <v-card
-                              elevation="0"
-                              v-if="reveal"
-                              class="transition-fast-in-fast-out v-card--reveal"
-                              style="display: grid; justify-content: center; height: 100%;"
-                              >
-                                <v-card-text class="pb-0">
-                                  Dungeon Gear
-                                </v-card-text>
-                                <v-card-actions class="pt-1" style="justify-self: center;">
-                                  <v-btn
-                                      text
-                                      color="light-blue accent-4"
-                                      @click="reveal = false"
-                                  >
-                                      Close
-                                  </v-btn>
-                                </v-card-actions>
-                              </v-card>
-                              </v-expand-transition>
-                            </v-card>
+                              </template>
+                              <v-card-text class="text-body-1">
+                                 {{ ilvl.text }}
+                              </v-card-text>
+                           </v-tooltip>
                         </v-col>
-                        <v-divider vertical />
-                        <v-col>
-                          <v-card elevation="0" style="display: grid; justify-content: center;">
-                            <v-card-title>590 iLvl</v-card-title>
-                            <v-img
-                              style= "max-width: max-content; justify-self: center;"
-                              :src="images.raid"
-                           ></v-img>
-                          <v-card-actions class="pt-1" style="justify-self: center;">
-                            <v-btn
-                            text
-                            color="light-blue accent-4"
-                            @click="reveal2 = true"
-                            >
-                            Learn More
-                            </v-btn>
-                          </v-card-actions>
-                          <v-expand-transition>
-                          <v-card
-                          elevation="0"
-                          v-if="reveal2"
-                          class="transition-fast-in-fast-out v-card--reveal"
-                          style="display: grid; justify-content: center; height: 100%;"
-                          >
-                            <v-card-text class="pb-0">
-                              24-man Raid No.1 (Weekly)
-                            </v-card-text>
-                            <v-card-actions class="pt-1" style="justify-self: center;">
-                              <v-btn
-                                  text
-                                  color="light-blue accent-4"
-                                  @click="reveal2 = false"
-                              >
-                                  Close
-                              </v-btn>
-                            </v-card-actions>
-                          </v-card>
-                          </v-expand-transition>
-                          </v-card>
-                        </v-col>
-                        <v-divider vertical />
-                        <v-col>
-                          <v-card elevation="0" style="display: grid; justify-content: center;">
-                            <v-card-title>595 iLvl</v-card-title>
-                            <v-img
-                              style= "max-width: max-content; justify-self: center;"
-                              :src="images.trial"
-                          ></v-img>
-                          <v-card-actions class="pt-1" style="justify-self: center;">
-                            <v-btn
-                            text
-                            color="light-blue accent-4"
-                            @click="reveal3 = true"
-                            >
-                            Learn More
-                            </v-btn>
-                          </v-card-actions>
-                          <v-expand-transition>
-                          <v-card
-                          elevation="0"
-                          v-if="reveal3"
-                          class="transition-fast-in-fast-out v-card--reveal"
-                          style="display: grid; justify-content: center; height: 100%;"
-                          >
-                            <v-card-text class="pb-0">
-                              EX Trial (Weapon)
-                            </v-card-text>
-                            <v-card-actions class="pt-1" style="justify-self: center;">
-                              <v-btn
-                                  text
-                                  color="light-blue accent-4"
-                                  @click="reveal3 = false"
-                              >
-                                  Close
-                              </v-btn>
-                            </v-card-actions>
-                          </v-card>
-                          </v-expand-transition>
-                          </v-card>
-                        </v-col>
-                      </v-row>
-                    </v-list>
-                  </v-expansion-panel-content>
-                </v-expansion-panel>
-              <v-expansion-panel>
-                <v-expansion-panel-header class="text-h6  text-center" @click="reveal = false; reveal2 = false; reveal3 = false; reveal4 = false; reveal5 = false; reveal6 = false;">
-                    6.2
-                  </v-expansion-panel-header>
-                  <v-expansion-panel-content>
-                    <v-list>
-                      <v-row>
-                        <v-col>
-                          <v-card elevation="0" style="display: grid; justify-content: center;">
-                            <v-card-title>585 iLvl</v-card-title>
-                            <v-img
-                              style= "max-width: max-content; justify-self: center;"
-                              :src="images.dungeon"
-                            ></v-img>
-                            <v-card-actions class="pt-1" style="justify-self: center;">
-                                <v-btn
-                                text
-                                color="light-blue accent-4"
-                                @click="reveal = true"
-                                >
-                                Learn More
-                                </v-btn>
-                              </v-card-actions>
-                              <v-expand-transition>
-                              <v-card
-                              elevation="0"
-                              v-if="reveal"
-                              class="transition-fast-in-fast-out v-card--reveal"
-                              style="display: grid; justify-content: center; height: 100%;"
-                              >
-                                <v-card-text class="pb-0">
-                                  Dungeon Gear
-                                </v-card-text>
-                                <v-card-actions class="pt-1" style="justify-self: center;">
-                                  <v-btn
-                                      text
-                                      color="light-blue accent-4"
-                                      @click="reveal = false"
-                                  >
-                                      Close
-                                  </v-btn>
-                                </v-card-actions>
-                              </v-card>
-                              </v-expand-transition>
-                            </v-card>
-                        </v-col>
-                        <v-divider vertical />
-                        <v-col>
-                          <v-card elevation="0" style="display: grid; justify-content: center;">
-                            <v-card-title>590 iLvl</v-card-title>
-                            <v-img
-                              style= "max-width: max-content; justify-self: center;"
-                              :src="images.tomestone"
-                            ></v-img>
-                          <v-card-actions class="pt-1" style="justify-self: center;">
-                            <v-btn
-                            text
-                            color="light-blue accent-4"
-                            @click="reveal2 = true"
-                            >
-                            Learn More
-                            </v-btn>
-                          </v-card-actions>
-                          <v-expand-transition>
-                          <v-card
-                          elevation="0"
-                          v-if="reveal2"
-                          class="transition-fast-in-fast-out v-card--reveal"
-                          style="display: grid; justify-content: center; height: 100%;"
-                          >
-                            <v-card-text class="pb-0">
-                              Tomestone Gear (Unlimited)
-                            </v-card-text>
-                            <v-card-actions class="pt-1" style="justify-self: center;">
-                              <v-btn
-                                  text
-                                  color="light-blue accent-4"
-                                  @click="reveal2 = false"
-                              >
-                                  Close
-                              </v-btn>
-                            </v-card-actions>
-                          </v-card>
-                          </v-expand-transition>
-                          </v-card>
-                        </v-col>
-                        <v-divider vertical />
-                        <v-col>
-                          <v-card elevation="0" style="display: grid; justify-content: center;">
-                            <v-card-title>610 iLvl</v-card-title>
-                            <div class="d-flex flex-row" style="justify-content: center;">
-                              <v-img
-                                style= "max-width: max-content; justify-self: center;"
-                                :src="images.raid"
-                              ></v-img>
-                              <v-img
-                                  style= "max-width: max-content; justify-self: center;"
-                                  :src="images.crafted"
-                              ></v-img>
-                            </div>
-                          <v-card-actions class="pt-1" style="justify-self: center;">
-                            <v-btn
-                            text
-                            color="light-blue accent-4"
-                            @click="reveal3 = true"
-                            >
-                            Learn More
-                            </v-btn>
-                          </v-card-actions>
-                          <v-expand-transition>
-                          <v-card
-                          elevation="0"
-                          v-if="reveal3"
-                          class="transition-fast-in-fast-out v-card--reveal"
-                          style="display: grid; justify-content: center; height: 100%;"
-                          >
-                            <v-card-text class="pb-0">
-                              Normal Raid 5-8 (Weekly)<br/>Crafted Gear
-                            </v-card-text>
-                            <v-card-actions class="pt-1" style="justify-self: center;">
-                              <v-btn
-                                  text
-                                  color="light-blue accent-4"
-                                  @click="reveal3 = false"
-                              >
-                                  Close
-                              </v-btn>
-                            </v-card-actions>
-                          </v-card>
-                          </v-expand-transition>
-                          </v-card>
-                        </v-col>
-                        <v-divider vertical />
-                        <v-col>
-                          <v-card elevation="0" style="display: grid; justify-content: center;">
-                            <v-card-title>615 iLvl</v-card-title>
-                              <v-img
-                                style= "max-width: max-content; justify-self: center;"
-                                :src="images.trial"
-                              ></v-img>
-                          <v-card-actions class="pt-1" style="justify-self: center;">
-                            <v-btn
-                            text
-                            color="light-blue accent-4"
-                            @click="reveal4 = true"
-                            >
-                            Learn More
-                            </v-btn>
-                          </v-card-actions>
-                          <v-expand-transition>
-                          <v-card
-                          elevation="0"
-                          v-if="reveal4"
-                          class="transition-fast-in-fast-out v-card--reveal"
-                          style="display: grid; justify-content: center; height: 100%;"
-                          >
-                            <v-card-text class="pb-0">
-                              EX Trial (Weapon)
-                            </v-card-text>
-                            <v-card-actions class="pt-1" style="justify-self: center;">
-                              <v-btn
-                                  text
-                                  color="light-blue accent-4"
-                                  @click="reveal4 = false"
-                              >
-                                  Close
-                              </v-btn>
-                            </v-card-actions>
-                          </v-card>
-                          </v-expand-transition>
-                          </v-card>
-                        </v-col>
-                        <v-divider vertical />
-                        <v-col>
-                          <v-card elevation="0" style="display: grid; justify-content: center;">
-                            <v-card-title>620 iLvl</v-card-title>
-                              <v-img
-                                style= "max-width: max-content; justify-self: center;"
-                                :src="images.tomestone"
-                              ></v-img>
-                          <v-card-actions class="pt-1" style="justify-self: center;">
-                            <v-btn
-                            text
-                            color="light-blue accent-4"
-                            @click="reveal5 = true"
-                            >
-                            Learn More
-                            </v-btn>
-                          </v-card-actions>
-                          <v-expand-transition>
-                          <v-card
-                          elevation="0"
-                          v-if="reveal5"
-                          class="transition-fast-in-fast-out v-card--reveal"
-                          style="display: grid; justify-content: center; height: 100%;"
-                          >
-                            <v-card-text class="pb-0">
-                              Tomestone Gear (Weekly)
-                            </v-card-text>
-                            <v-card-actions class="pt-1" style="justify-self: center;">
-                              <v-btn
-                                  text
-                                  color="light-blue accent-4"
-                                  @click="reveal5 = false"
-                              >
-                                  Close
-                              </v-btn>
-                            </v-card-actions>
-                          </v-card>
-                          </v-expand-transition>
-                          </v-card>
-                        </v-col>
-                        <v-divider vertical />
-                        <v-col>
-                          <v-card elevation="0" style="display: grid; justify-content: center;">
-                            <v-card-title>630 iLvl</v-card-title>
-                            <div class="d-flex flex-row" style="justify-content: center;">
-                              <v-img
-                                style= "max-width: max-content; justify-self: center;"
-                                :src="images.savage"
-                              ></v-img>
-                              <v-img
-                                  style= "max-width: max-content; justify-self: center;"
-                                  :src="images.tomestone"
-                              ></v-img>
-                            </div>
-                          <v-card-actions class="pt-1" style="justify-self: center;">
-                            <v-btn
-                            text
-                            color="light-blue accent-4"
-                            @click="reveal6 = true"
-                            >
-                            Learn More
-                            </v-btn>
-                          </v-card-actions>
-                          <v-expand-transition>
-                          <v-card
-                          elevation="0"
-                          v-if="reveal6"
-                          class="transition-fast-in-fast-out v-card--reveal"
-                          style="display: grid; justify-content: center; height: 100%;"
-                          >
-                            <v-card-text class="pb-0">
-                              Savage Raid Gear<br/>Upgraded Tomestone Gear<br/>Savage Gear Weapon (iLvl 635)
-                            </v-card-text>
-                            <v-card-actions class="pt-1" style="justify-self: center;">
-                              <v-btn
-                                  text
-                                  color="light-blue accent-4"
-                                  @click="reveal6 = false"
-                              >
-                                  Close
-                              </v-btn>
-                            </v-card-actions>
-                          </v-card>
-                          </v-expand-transition>
-                          </v-card>
-                        </v-col>
-                      </v-row>
-                    </v-list>
-                  </v-expansion-panel-content>
-                </v-expansion-panel>
-              <v-expansion-panel>
-                <v-expansion-panel-header class="text-h6  text-center" @click="reveal = false; reveal2 = false; reveal3 = false; reveal4 = false; reveal5 = false; reveal6 = false;">
-                    6.3
-                  </v-expansion-panel-header>
-                  <v-expansion-panel-content>
-                    <v-list>
-                      <v-row>
-                        <v-col>
-                          <v-card elevation="0" style="display: grid; justify-content: center;">
-                            <v-card-title>605 iLvl</v-card-title>
-                            <v-img
-                              style= "max-width: max-content; justify-self: center;"
-                              :src="images.dungeon"
-                            ></v-img>
-                            <v-card-actions class="pt-1" style="justify-self: center;">
-                                <v-btn
-                                text
-                                color="light-blue accent-4"
-                                @click="reveal = true"
-                                >
-                                Learn More
-                                </v-btn>
-                              </v-card-actions>
-                              <v-expand-transition>
-                              <v-card
-                              elevation="0"
-                              v-if="reveal"
-                              class="transition-fast-in-fast-out v-card--reveal"
-                              style="display: grid; justify-content: center; height: 100%;"
-                              >
-                                <v-card-text class="pb-0">
-                                  Dungeon Gear
-                                </v-card-text>
-                                <v-card-actions class="pt-1" style="justify-self: center;">
-                                  <v-btn
-                                      text
-                                      color="light-blue accent-4"
-                                      @click="reveal = false"
-                                  >
-                                      Close
-                                  </v-btn>
-                                </v-card-actions>
-                              </v-card>
-                              </v-expand-transition>
-                            </v-card>
-                        </v-col>
-                        <v-divider vertical />
-                        <v-col>
-                          <v-card elevation="0" style="display: grid; justify-content: center;">
-                            <v-card-title>620 iLvl</v-card-title>
-                            <v-img
-                              style= "max-width: max-content; justify-self: center;"
-                              :src="images.raid"
-                           ></v-img>
-                          <v-card-actions class="pt-1" style="justify-self: center;">
-                            <v-btn
-                            text
-                            color="light-blue accent-4"
-                            @click="reveal2 = true"
-                            >
-                            Learn More
-                            </v-btn>
-                          </v-card-actions>
-                          <v-expand-transition>
-                          <v-card
-                          elevation="0"
-                          v-if="reveal2"
-                          class="transition-fast-in-fast-out v-card--reveal"
-                          style="display: grid; justify-content: center; height: 100%;"
-                          >
-                            <v-card-text class="pb-0">
-                              24-man Raid No.2 (Weekly)
-                            </v-card-text>
-                            <v-card-actions class="pt-1" style="justify-self: center;">
-                              <v-btn
-                                  text
-                                  color="light-blue accent-4"
-                                  @click="reveal2 = false"
-                              >
-                                  Close
-                              </v-btn>
-                            </v-card-actions>
-                          </v-card>
-                          </v-expand-transition>
-                          </v-card>
-                        </v-col>
-                        <v-divider vertical />
-                        <v-col>
-                          <v-card elevation="0" style="display: grid; justify-content: center;">
-                            <v-card-title>625 iLvl</v-card-title>
-                            <v-img
-                              style= "max-width: max-content; justify-self: center;"
-                              :src="images.trial"
-                          ></v-img>
-                          <v-card-actions class="pt-1" style="justify-self: center;">
-                            <v-btn
-                            text
-                            color="light-blue accent-4"
-                            @click="reveal3 = true"
-                            >
-                            Learn More
-                            </v-btn>
-                          </v-card-actions>
-                          <v-expand-transition>
-                          <v-card
-                          elevation="0"
-                          v-if="reveal3"
-                          class="transition-fast-in-fast-out v-card--reveal"
-                          style="display: grid; justify-content: center; height: 100%;"
-                          >
-                            <v-card-text class="pb-0">
-                              EX Trial (Weapon)
-                            </v-card-text>
-                            <v-card-actions class="pt-1" style="justify-self: center;">
-                              <v-btn
-                                  text
-                                  color="light-blue accent-4"
-                                  @click="reveal3 = false"
-                              >
-                                  Close
-                              </v-btn>
-                            </v-card-actions>
-                          </v-card>
-                          </v-expand-transition>
-                          </v-card>
-                        </v-col>
-                      </v-row>
-                    </v-list>
-                  </v-expansion-panel-content>
-                </v-expansion-panel>
-                 <v-expansion-panel>
-                <v-expansion-panel-header class="text-h6  text-center" @click="reveal = false; reveal2 = false; reveal3 = false; reveal4 = false; reveal5 = false; reveal6 = false;">
-                    6.4
-                  </v-expansion-panel-header>
-                  <v-expansion-panel-content>
-                    <v-list>
-                      <v-row>
-                        <v-col>
-                          <v-card elevation="0" style="display: grid; justify-content: center;">
-                            <v-card-title>615 iLvl</v-card-title>
-                            <v-img
-                              style= "max-width: max-content; justify-self: center;"
-                              :src="images.dungeon"
-                            ></v-img>
-                            <v-card-actions class="pt-1" style="justify-self: center;">
-                                <v-btn
-                                text
-                                color="light-blue accent-4"
-                                @click="reveal = true"
-                                >
-                                Learn More
-                                </v-btn>
-                              </v-card-actions>
-                              <v-expand-transition>
-                              <v-card
-                              elevation="0"
-                              v-if="reveal"
-                              class="transition-fast-in-fast-out v-card--reveal"
-                              style="display: grid; justify-content: center; height: 100%;"
-                              >
-                                <v-card-text class="pb-0">
-                                  Dungeon Gear
-                                </v-card-text>
-                                <v-card-actions class="pt-1" style="justify-self: center;">
-                                  <v-btn
-                                      text
-                                      color="light-blue accent-4"
-                                      @click="reveal = false"
-                                  >
-                                      Close
-                                  </v-btn>
-                                </v-card-actions>
-                              </v-card>
-                              </v-expand-transition>
-                            </v-card>
-                        </v-col>
-                        <v-divider vertical />
-                        <v-col>
-                          <v-card elevation="0" style="display: grid; justify-content: center;">
-                            <v-card-title>620 iLvl</v-card-title>
-                            <v-img
-                              style= "max-width: max-content; justify-self: center;"
-                              :src="images.tomestone"
-                            ></v-img>
-                          <v-card-actions class="pt-1" style="justify-self: center;">
-                            <v-btn
-                            text
-                            color="light-blue accent-4"
-                            @click="reveal2 = true"
-                            >
-                            Learn More
-                            </v-btn>
-                          </v-card-actions>
-                          <v-expand-transition>
-                          <v-card
-                          elevation="0"
-                          v-if="reveal2"
-                          class="transition-fast-in-fast-out v-card--reveal"
-                          style="display: grid; justify-content: center; height: 100%;"
-                          >
-                            <v-card-text class="pb-0">
-                              Tomestone Gear (Unlimited)
-                            </v-card-text>
-                            <v-card-actions class="pt-1" style="justify-self: center;">
-                              <v-btn
-                                  text
-                                  color="light-blue accent-4"
-                                  @click="reveal2 = false"
-                              >
-                                  Close
-                              </v-btn>
-                            </v-card-actions>
-                          </v-card>
-                          </v-expand-transition>
-                          </v-card>
-                        </v-col>
-                        <v-divider vertical />
-                        <v-col>
-                          <v-card elevation="0" style="display: grid; justify-content: center;">
-                            <v-card-title>640 iLvl</v-card-title>
-                            <div class="d-flex flex-row" style="justify-content: center;">
-                              <v-img
-                                style= "max-width: max-content; justify-self: center;"
-                                :src="images.raid"
-                              ></v-img>
-                              <v-img
-                                style= "max-width: max-content; justify-self: center;"
-                                :src="images.crafted"
-                              ></v-img>
-                            </div>
-                          <v-card-actions class="pt-1" style="justify-self: center;">
-                            <v-btn
-                            text
-                            color="light-blue accent-4"
-                            @click="reveal3 = true"
-                            >
-                            Learn More
-                            </v-btn>
-                          </v-card-actions>
-                          <v-expand-transition>
-                          <v-card
-                          elevation="0"
-                          v-if="reveal3"
-                          class="transition-fast-in-fast-out v-card--reveal"
-                          style="display: grid; justify-content: center; height: 100%;"
-                          >
-                            <v-card-text class="pb-0">
-                              Normal Raid 9-12 (Weekly)<br/>Crafted Gear
-                            </v-card-text>
-                            <v-card-actions class="pt-1" style="justify-self: center;">
-                              <v-btn
-                                  text
-                                  color="light-blue accent-4"
-                                  @click="reveal3 = false"
-                              >
-                                  Close
-                              </v-btn>
-                            </v-card-actions>
-                          </v-card>
-                          </v-expand-transition>
-                          </v-card>
-                        </v-col>
-                        <v-divider vertical />
-                        <v-col>
-                          <v-card elevation="0" style="display: grid; justify-content: center;">
-                            <v-card-title>645 iLvl</v-card-title>
-                              <v-img
-                                style= "max-width: max-content; justify-self: center;"
-                                :src="images.trial"
-                              ></v-img>
-                          <v-card-actions class="pt-1" style="justify-self: center;">
-                            <v-btn
-                            text
-                            color="light-blue accent-4"
-                            @click="reveal4 = true"
-                            >
-                            Learn More
-                            </v-btn>
-                          </v-card-actions>
-                          <v-expand-transition>
-                          <v-card
-                          elevation="0"
-                          v-if="reveal4"
-                          class="transition-fast-in-fast-out v-card--reveal"
-                          style="display: grid; justify-content: center; height: 100%;"
-                          >
-                            <v-card-text class="pb-0">
-                              EX Trial (Weapon)
-                            </v-card-text>
-                            <v-card-actions class="pt-1" style="justify-self: center;">
-                              <v-btn
-                                  text
-                                  color="light-blue accent-4"
-                                  @click="reveal4 = false"
-                              >
-                                  Close
-                              </v-btn>
-                            </v-card-actions>
-                          </v-card>
-                          </v-expand-transition>
-                          </v-card>
-                        </v-col>
-                        <v-divider vertical />
-                        <v-col>
-                          <v-card elevation="0" style="display: grid; justify-content: center;">
-                            <v-card-title>650 iLvl</v-card-title>
-                              <v-img
-                                style= "max-width: max-content; justify-self: center;"
-                                :src="images.tomestone"
-                              ></v-img>
-                          <v-card-actions class="pt-1" style="justify-self: center;">
-                            <v-btn
-                            text
-                            color="light-blue accent-4"
-                            @click="reveal5 = true"
-                            >
-                            Learn More
-                            </v-btn>
-                          </v-card-actions>
-                          <v-expand-transition>
-                          <v-card
-                          elevation="0"
-                          v-if="reveal5"
-                          class="transition-fast-in-fast-out v-card--reveal"
-                          style="display: grid; justify-content: center; height: 100%;"
-                          >
-                            <v-card-text class="pb-0">
-                              Tomestone Gear (Weekly)
-                            </v-card-text>
-                            <v-card-actions class="pt-1" style="justify-self: center;">
-                              <v-btn
-                                  text
-                                  color="light-blue accent-4"
-                                  @click="reveal5 = false"
-                              >
-                                  Close
-                              </v-btn>
-                            </v-card-actions>
-                          </v-card>
-                          </v-expand-transition>
-                          </v-card>
-                        </v-col>
-                        <v-divider vertical />
-                        <v-col>
-                          <v-card elevation="0" style="display: grid; justify-content: center;">
-                            <v-card-title>660 iLvl</v-card-title>
-                            <div class="d-flex flex-row" style="justify-content: center;">
-                              <v-img
-                                style= "max-width: max-content; justify-self: center;"
-                                :src="images.savage"
-                              ></v-img>
-                              <v-img
-                                style= "max-width: max-content; justify-self: center;"
-                                :src="images.tomestone"
-                              ></v-img>
-                            </div>
-                          <v-card-actions class="pt-1" style="justify-self: center;">
-                            <v-btn
-                            text
-                            color="light-blue accent-4"
-                            @click="reveal6 = true"
-                            >
-                            Learn More
-                            </v-btn>
-                          </v-card-actions>
-                          <v-expand-transition>
-                          <v-card
-                          elevation="0"
-                          v-if="reveal6"
-                          class="transition-fast-in-fast-out v-card--reveal"
-                          style="display: grid; justify-content: center; height: 100%;"
-                          >
-                            <v-card-text class="pb-0">
-                              Savage Raid Gear<br/>Upgraded Tomestone Gear<br/>Savage Gear Weapon (iLvl 665)
-                            </v-card-text>
-                            <v-card-actions class="pt-1" style="justify-self: center;">
-                              <v-btn
-                                  text
-                                  color="light-blue accent-4"
-                                  @click="reveal6 = false"
-                              >
-                                  Close
-                              </v-btn>
-                            </v-card-actions>
-                          </v-card>
-                          </v-expand-transition>
-                          </v-card>
-                        </v-col>
-                      </v-row>
-                    </v-list>
-                  </v-expansion-panel-content>
-                </v-expansion-panel>
-                 <v-expansion-panel>
-                <v-expansion-panel-header class="text-h6  text-center" @click="reveal = false; reveal2 = false; reveal3 = false; reveal4 = false; reveal5 = false; reveal6 = false;">
-                    6.5
-                  </v-expansion-panel-header>
-                  <v-expansion-panel-content>
-                    <v-list>
-                      <v-row>
-                        <v-col>
-                          <v-card elevation="0" style="display: grid; justify-content: center;">
-                            <v-card-title>635 iLvl</v-card-title>
-                            <v-img
-                              style= "max-width: max-content; justify-self: center;"
-                              :src="images.dungeon"
-                            ></v-img>
-                            <v-card-actions class="pt-1" style="justify-self: center;">
-                                <v-btn
-                                text
-                                color="light-blue accent-4"
-                                @click="reveal = true"
-                                >
-                                Learn More
-                                </v-btn>
-                              </v-card-actions>
-                              <v-expand-transition>
-                              <v-card
-                              elevation="0"
-                              v-if="reveal"
-                              class="transition-fast-in-fast-out v-card--reveal"
-                              style="display: grid; justify-content: center; height: 100%;"
-                              >
-                                <v-card-text class="pb-0">
-                                  Dungeon Gear
-                                </v-card-text>
-                                <v-card-actions class="pt-1" style="justify-self: center;">
-                                  <v-btn
-                                      text
-                                      color="light-blue accent-4"
-                                      @click="reveal = false"
-                                  >
-                                      Close
-                                  </v-btn>
-                                </v-card-actions>
-                              </v-card>
-                              </v-expand-transition>
-                            </v-card>
-                        </v-col>
-                        <v-divider vertical />
-                        <v-col>
-                          <v-card elevation="0" style="display: grid; justify-content: center;">
-                            <v-card-title>650 iLvl</v-card-title>
-                            <v-img
-                              style= "max-width: max-content; justify-self: center;"
-                              :src="images.raid"
-                           ></v-img>
-                          <v-card-actions class="pt-1" style="justify-self: center;">
-                            <v-btn
-                            text
-                            color="light-blue accent-4"
-                            @click="reveal2 = true"
-                            >
-                            Learn More
-                            </v-btn>
-                          </v-card-actions>
-                          <v-expand-transition>
-                          <v-card
-                          elevation="0"
-                          v-if="reveal2"
-                          class="transition-fast-in-fast-out v-card--reveal"
-                          style="display: grid; justify-content: center; height: 100%;"
-                          >
-                            <v-card-text class="pb-0">
-                              24-man Raid No.3 (Weekly)
-                            </v-card-text>
-                            <v-card-actions class="pt-1" style="justify-self: center;">
-                              <v-btn
-                                  text
-                                  color="light-blue accent-4"
-                                  @click="reveal2 = false"
-                              >
-                                  Close
-                              </v-btn>
-                            </v-card-actions>
-                          </v-card>
-                          </v-expand-transition>
-                          </v-card>
-                        </v-col>
-                        <v-divider vertical />
-                        <v-col>
-                          <v-card elevation="0" style="display: grid; justify-content: center;">
-                            <v-card-title>655 iLvl</v-card-title>
-                            <v-img
-                              style= "max-width: max-content; justify-self: center;"
-                              :src="images.trial"
-                          ></v-img>
-                          <v-card-actions class="pt-1" style="justify-self: center;">
-                            <v-btn
-                            text
-                            color="light-blue accent-4"
-                            @click="reveal3 = true"
-                            >
-                            Learn More
-                            </v-btn>
-                          </v-card-actions>
-                          <v-expand-transition>
-                          <v-card
-                          elevation="0"
-                          v-if="reveal3"
-                          class="transition-fast-in-fast-out v-card--reveal"
-                          style="display: grid; justify-content: center; height: 100%;"
-                          >
-                            <v-card-text class="pb-0">
-                              EX Trial (Weapon)
-                            </v-card-text>
-                            <v-card-actions class="pt-1" style="justify-self: center;">
-                              <v-btn
-                                  text
-                                  color="light-blue accent-4"
-                                  @click="reveal3 = false"
-                              >
-                                  Close
-                              </v-btn>
-                            </v-card-actions>
-                          </v-card>
-                          </v-expand-transition>
-                          </v-card>
-                        </v-col>
-                      </v-row>
-                    </v-list>
+                     </v-row>
                   </v-expansion-panel-content>
                 </v-expansion-panel>
               </v-expansion-panels>
@@ -1169,54 +49,225 @@
 .v-expansion-panel--active{
   background-color: #e8e8e8 !important;
 }
-.v-expansion-panel-content__wrap{
-  background-color: #e8e8e8;
-}
-.v-list{
-  background-color: #e8e8e8;
-}
+
 .v-card{
   background-color: #e8e8e8;
 }
-.v-divider{
-  border-color: #0090ea3f;
-}
-.v-card--reveal {
-  bottom: 0;
-  opacity: 1 !important;
-  position: absolute;
-  width: 100%;
+
+.v-card__text{
+    white-space: pre;
 }
 </style>
 
 <script>
-import dungeon from '../../assets/dungeon.png'
-import crafted from '../../assets/crafted.png'
-import quest from '../../assets/quest.png'
-import raid from '../../assets/raid.png'
-import savage from '../../assets/savage.png'
-import tomestone from '../../assets/tomestone.png'
-import trial from '../../assets/trial.png'
+const crafted = require('../../assets/crafted.png')
+const dungeon = require('../../assets/dungeon.png')
+const quest = require('../../assets/quest.png')
+const raid = require('../../assets/raid.png')
+const savage = require('../../assets/savage.png')
+const tomestone = require('../../assets/tomestone.png')
+const trial = require('../../assets/trial.png')
 
   export default {
     data: () => {
       return {
-        images: {
-          dungeon,
-          crafted,
-          quest,
-          raid,
-          savage,
-          tomestone,
-          trial,
-        },
-        reveal: false,
-        reveal2: false,
-        reveal3: false,
-        reveal4: false,
-        reveal5: false,
-        reveal6: false,
-      }
-    },
+       patches: [
+            {
+            title: '6.0',
+            ilvls: [
+               { number: '560', 
+                 icons: [
+                    { icon: quest }, 
+                    { icon: dungeon }, 
+                  ],
+                  text: `Quest Gear\nDungeon Gear`
+               }, 
+               {  number: '570',
+                  icons: [
+                     { icon: tomestone },
+                  ],
+                  text: `Tomestone Gear`
+               },
+               { number: '580',
+                  icons: [
+                    { icon: trial }, 
+                    { icon: raid },
+                    { icon: crafted },
+                  ],
+                  text: `EX Trial (Weapon + Accessories)\nNormal Raid 1-4 (Weekly) (Patch 6.01)\nCrafted Gear (Patch 6.05)` 
+               },
+               { number: '590',
+                  icons: [
+                    { icon: tomestone },
+                  ],
+                  text: `Tomestone Gear (Weekly) (Patch 6.05)`
+               },
+               { number: '600',
+                  icons: [
+                    { icon: tomestone },
+                    { icon: savage },
+                  ],
+                  text: `Savage Raid Gear (Patch 6.05)\nUpgraded Tomestone Gear (Patch 6.05)\nSavage Raid Weapon (iLvl 605) (Patch 6.05)`
+               },
+               ]
+            },
+            {
+            title: '6.1',
+            ilvls: [
+               { number: '575', 
+                 icons: [
+                    { icon: dungeon }, 
+                  ],
+                  text: `Dungeon Gear`
+               },
+               { number: '590',
+                  icons: [
+                    { icon: raid },
+                  ],
+                  text: `24-man Raid No.1 (Weekly)` 
+               },
+               { number: '595',
+                  icons: [
+                    { icon: trial },
+                  ],
+                  text: `EX Trial (Weapon)`
+               },
+               ]
+            },
+            {
+            title: '6.2',
+            ilvls: [
+               { number: '585',
+                  icons: [
+                    { icon: dungeon },
+                  ],
+                  text: `Dungeon Gear`
+               },
+               { number: '590',
+                  icons: [
+                    { icon: tomestone },
+                  ],
+                  text: `Tomestone Gear (Unlimited)`
+               },
+               { number: '610',
+                  icons: [
+                    { icon: raid },
+                    { icon: crafted },
+                  ],
+                  text: `Normal Raid 5-8 (Weekly)\nCrafted Gear`
+               },
+               { number: '615',
+                  icons: [
+                    { icon: trial },
+                  ],
+                  text: `EX Trial (Weapon)`
+               },
+               { number: '620',
+                  icons: [
+                    { icon: tomestone },
+                  ],
+                  text: `Tomestone Gear (Weekly)`
+               },
+               { number: '630',
+                  icons: [
+                    { icon: tomestone },
+                    { icon: savage },
+                  ],
+                  text: `Upgraded Tomestone Gear\nSavage Raid Gear\nSavage Gear Weapon (iLvl 635)`
+               },
+               ]
+            },
+            {
+            title: '6.3',
+            ilvls: [
+               { number: '605', 
+                 icons: [
+                    { icon: dungeon }, 
+                  ],
+                  text: `Dungeon Gear`
+               },
+               { number: '620',
+                  icons: [
+                    { icon: raid },
+                  ],
+                  text: `24-man Raid No.2 (Weekly)` 
+               },
+               { number: '625',
+                  icons: [
+                    { icon: trial },
+                  ],
+                  text: `EX Trial (Weapon)`
+               },
+               ]
+            },
+            {
+            title: '6.4',
+            ilvls: [
+               { number: '615',
+                  icons: [
+                    { icon: dungeon },
+                  ],
+                  text: `Dungeon Gear`
+               },
+               { number: '620',
+                  icons: [
+                    { icon: tomestone },
+                  ],
+                  text: `Tomestone Gear (Unlimited)`
+               },
+               { number: '640',
+                  icons: [
+                    { icon: raid },
+                    { icon: crafted },
+                  ],
+                  text: `Normal Raid 9-12 (Weekly)\nCrafted Gear`
+               },
+               { number: '645',
+                  icons: [
+                    { icon: trial },
+                  ],
+                  text: `EX Trial (Weapon)`
+               },
+               { number: '650',
+                  icons: [
+                    { icon: tomestone },
+                  ],
+                  text: `Tomestone Gear (Weekly)`
+               },
+               { number: '660',
+                  icons: [
+                    { icon: tomestone },
+                    { icon: savage },
+                  ],
+                  text: `Upgraded Tomestone Gear\nSavage Raid Gear\nSavage Gear Weapon (iLvl 665)`
+               },
+               ]
+            },
+            {
+            title: '6.5',
+            ilvls: [
+               { number: '635', 
+                 icons: [
+                    { icon: dungeon }, 
+                  ],
+                  text: `Dungeon Gear`
+               },
+               { number: '650',
+                  icons: [
+                    { icon: raid },
+                  ],
+                  text: `24-man Raid No.3 (Weekly)` 
+               },
+               { number: '655',
+                  icons: [
+                    { icon: trial },
+                  ],
+                  text: `EX Trial (Weapon)`
+               },
+               ]
+            },
+      ]
+    }
   }
+}
 </script>

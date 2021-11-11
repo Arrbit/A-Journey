@@ -4,667 +4,297 @@
   min-height="70vh"
   rounded="lg"
   >
-  <v-card-title style="justify-content: center;" class="text-caption">
-  Endwalker Information is based on past expansions' content cycle and will be updated as information comes out
-  </v-card-title>
-  <v-simple-table>
-    <template v-slot:default>
-      <thead>
-        <tr>
-          <th class="text-left">
-            
-          </th>
-          <th class="text-left">
-            6.0
-          </th>
-          <th class="text-left">
-            6.01
-          </th>
-          <th class="text-left">
-            6.05
-          </th>
-          <th class="text-left">
-            6.1
-          </th>
-          <th class="text-left">
-            6.2
-          </th>
-          <th class="text-left">
-            6.3
-          </th>
-          <th class="text-left">
-            6.4
-          </th>
-          <th class="text-left">
-            6.5
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>560</td>
-          <td>
-            <v-tooltip bottom>
-              <template v-slot:activator="{ on, attrs }">
-                <img
-                  v-bind="attrs"
-                  v-on="on"
-                  src="https://sleepingdragons.eu/wp-content/uploads/2020/05/quest_Icon.png" />
-              </template>
-              <span>Quest Gear</span>
-            </v-tooltip>
-            <v-tooltip bottom>
-              <template v-slot:activator="{ on, attrs }">
-                <img
-                  v-bind="attrs"
-                  v-on="on"
-                  src="https://sleepingdragons.eu/wp-content/uploads/2020/05/dungeon-1.png" />
-              </template>
-              <span>Dungeon Gear</span>
-            </v-tooltip> 
-          </td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr> 
-          <td>570</td>
-          <td>
-            <v-tooltip bottom>
-            <template v-slot:activator="{ on, attrs }">
-                <img
-                  v-bind="attrs"
-                  v-on="on"
-                  src="https://sleepingdragons.eu/wp-content/uploads/2020/05/roulette.png" />
-              </template>
-              <span>Tomestone Gear</span>
-            </v-tooltip>
-          </td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr> 
-          <td>575</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>
-            <v-tooltip bottom>
-            <template v-slot:activator="{ on, attrs }">
-                <img
-                  v-bind="attrs"
-                  v-on="on"
-                  src="https://sleepingdragons.eu/wp-content/uploads/2020/05/dungeon-1.png" />
-              </template>
-              <span>Dungeon Gear</span>
-            </v-tooltip>
-          </td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr> 
-          <td>580</td>
-          <td>
-            <v-tooltip bottom>
-            <template v-slot:activator="{ on, attrs }">
-                <img
-                  v-bind="attrs"
-                  v-on="on"
-                  src="https://sleepingdragons.eu/wp-content/uploads/2020/05/trial-1.png" />
-              </template>
-              <span>EX Trial (Weapon + Accessories)</span>
-            </v-tooltip>
-          </td>
-          <td>
-            <v-tooltip bottom>
-            <template v-slot:activator="{ on, attrs }">
-                <img
-                  v-bind="attrs"
-                  v-on="on"
-                  src="https://sleepingdragons.eu/wp-content/uploads/2020/05/raid.png" />
-              </template>
-              <span>Normal Raid 1-4 (Weekly)</span>
-            </v-tooltip>
-          </td>
-          <td>
-            <v-tooltip bottom>
-            <template v-slot:activator="{ on, attrs }">
-                <img
-                  v-bind="attrs"
-                  v-on="on"
-                  src="https://sleepingdragons.eu/wp-content/uploads/2020/05/crafted-1.png" />
-              </template>
-              <span>Crafted Gear</span>
-            </v-tooltip>
-          </td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr> 
-          <td>585</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>
-            <v-tooltip bottom>
-            <template v-slot:activator="{ on, attrs }">
-                <img
-                  v-bind="attrs"
-                  v-on="on"
-                  src="https://sleepingdragons.eu/wp-content/uploads/2020/05/dungeon-1.png" />
-              </template>
-              <span>Dungeon Gear</span>
-            </v-tooltip>
-          </td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr> 
-          <td>590</td>
-          <td></td>
-          <td></td>
-          <td>
-            <v-tooltip bottom>
-            <template v-slot:activator="{ on, attrs }">
-                <img
-                  v-bind="attrs"
-                  v-on="on"
-                  src="https://sleepingdragons.eu/wp-content/uploads/2020/05/roulette.png" />
-              </template>
-              <span>Tomestone Gear (Weekly)</span>
-            </v-tooltip>
-          </td>
-          <td>
-            <v-tooltip bottom>
-            <template v-slot:activator="{ on, attrs }">
-                <img
-                  v-bind="attrs"
-                  v-on="on"
-                  src="https://sleepingdragons.eu/wp-content/uploads/2020/05/raid.png" />
-              </template>
-              <span>24-man Raid No.1 (Weekly)</span>
-            </v-tooltip>
-          </td>
-          <td>
-            <v-tooltip bottom>
-            <template v-slot:activator="{ on, attrs }">
-                <img
-                  v-bind="attrs"
-                  v-on="on"
-                  src="https://sleepingdragons.eu/wp-content/uploads/2020/05/roulette.png" />
-              </template>
-              <span>Tomestone Gear (Unlimited)</span>
-            </v-tooltip>
-          </td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr> 
-          <td>595</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>
-            <v-tooltip bottom>
-            <template v-slot:activator="{ on, attrs }">
-                <img
-                  v-bind="attrs"
-                  v-on="on"
-                  src="https://sleepingdragons.eu/wp-content/uploads/2020/05/trial-1.png" />
-              </template>
-              <span>EX Trial (Weapon)</span>
-            </v-tooltip>
-          </td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr> 
-          <td>600</td>
-          <td></td>
-          <td></td>
-           <td>
-            <v-tooltip bottom>
-            <template v-slot:activator="{ on, attrs }">
-                <img
-                  v-bind="attrs"
-                  v-on="on"
-                  src="https://sleepingdragons.eu/wp-content/uploads/2020/05/realraid.png" />
-              </template>
-              <span>Savage Raid Gear</span>
-            </v-tooltip>
-            <v-tooltip bottom>
-            <template v-slot:activator="{ on, attrs }">
-                <img
-                  v-bind="attrs"
-                  v-on="on"
-                  src="https://sleepingdragons.eu/wp-content/uploads/2020/05/roulette.png" />
-              </template>
-              <span>Upgraded Tomestone Gear</span>
-            </v-tooltip>
-          </td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr> 
-          <td>605</td>
-          <td></td>
-          <td></td>
-          <td>
-          <v-tooltip bottom>
-          <template v-slot:activator="{ on, attrs }">
-              <img
-                v-bind="attrs"
-                v-on="on"
-                src="https://sleepingdragons.eu/wp-content/uploads/2020/05/realraid.png" />
-            </template>
-            <span>Savage Raid Weapon</span>
-          </v-tooltip>
-          </td>
-          <td></td>
-          <td></td>
-          <td>
-          <v-tooltip bottom>
-          <template v-slot:activator="{ on, attrs }">
-              <img
-                v-bind="attrs"
-                v-on="on"
-                src="https://sleepingdragons.eu/wp-content/uploads/2020/05/dungeon-1.png" />
-            </template>
-            <span>Dungeon Gear</span>
-          </v-tooltip>
-          </td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr> 
-          <td>610</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>
-          <v-tooltip bottom>
-          <template v-slot:activator="{ on, attrs }">
-              <img
-                v-bind="attrs"
-                v-on="on"
-                src="https://sleepingdragons.eu/wp-content/uploads/2020/05/raid.png" />
-            </template>
-            <span>Normal Raid 5-8 (Weekly)</span>
-          </v-tooltip>
-          <v-tooltip bottom>
-          <template v-slot:activator="{ on, attrs }">
-              <img
-                v-bind="attrs"
-                v-on="on"
-                src="https://sleepingdragons.eu/wp-content/uploads/2020/05/crafted-1.png" />
-            </template>
-            <span>Crafted Gear</span>
-          </v-tooltip>
-          </td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr> 
-          <td>615</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>
-            <v-tooltip bottom>
-            <template v-slot:activator="{ on, attrs }">
-                <img
-                  v-bind="attrs"
-                  v-on="on"
-                  src="https://sleepingdragons.eu/wp-content/uploads/2020/05/trial-1.png" />
-              </template>
-              <span>EX Trial (Weapon)</span>
-            </v-tooltip>
-          </td>
-          <td></td>
-          <td>
-            <v-tooltip bottom>
-            <template v-slot:activator="{ on, attrs }">
-                <img
-                  v-bind="attrs"
-                  v-on="on"
-                  src="https://sleepingdragons.eu/wp-content/uploads/2020/05/dungeon-1.png" />
-              </template>
-              <span>Dungeon Gear</span>
-            </v-tooltip>
-          </td>
-          <td></td>
-        </tr>
-        <tr> 
-          <td>620</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>
-            <v-tooltip bottom>
-            <template v-slot:activator="{ on, attrs }">
-                <img
-                  v-bind="attrs"
-                  v-on="on"
-                  src="https://sleepingdragons.eu/wp-content/uploads/2020/05/roulette.png" />
-              </template>
-              <span>Tomestone Gear (Weekly)</span>
-            </v-tooltip>
-          </td>
-          <td>
-            <v-tooltip bottom>
-            <template v-slot:activator="{ on, attrs }">
-                <img
-                  v-bind="attrs"
-                  v-on="on"
-                  src="https://sleepingdragons.eu/wp-content/uploads/2020/05/raid.png" />
-              </template>
-              <span>24-man Raid No.2 (Weekly)</span>
-            </v-tooltip>
-          </td>
-          <td>
-            <v-tooltip bottom>
-            <template v-slot:activator="{ on, attrs }">
-                <img
-                  v-bind="attrs"
-                  v-on="on"
-                  src="https://sleepingdragons.eu/wp-content/uploads/2020/05/roulette.png" />
-              </template>
-              <span>Tomestone Gear (Unlimited)</span>
-            </v-tooltip>
-          </td>
-          <td></td>
-        </tr>
-        <tr> 
-          <td>625</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>
-            <v-tooltip bottom>
-            <template v-slot:activator="{ on, attrs }">
-                <img
-                  v-bind="attrs"
-                  v-on="on"
-                  src="https://sleepingdragons.eu/wp-content/uploads/2020/05/trial-1.png" />
-              </template>
-              <span>EX Trial (Weapon)</span>
-            </v-tooltip>
-          </td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr> 
-          <td>630</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>
-            <v-tooltip bottom>
-            <template v-slot:activator="{ on, attrs }">
-                <img
-                  v-bind="attrs"
-                  v-on="on"
-                  src="https://sleepingdragons.eu/wp-content/uploads/2020/05/realraid.png" />
-              </template>
-              <span>Savage Raid Gear</span>
-            </v-tooltip>
-            <v-tooltip bottom>
-            <template v-slot:activator="{ on, attrs }">
-                <img
-                  v-bind="attrs"
-                  v-on="on"
-                  src="https://sleepingdragons.eu/wp-content/uploads/2020/05/roulette.png" />
-              </template>
-              <span>Upgraded Tomestone Gear</span>
-            </v-tooltip>
-          </td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr> 
-          <td>635</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>
-            <v-tooltip bottom>
-            <template v-slot:activator="{ on, attrs }">
-                <img
-                  v-bind="attrs"
-                  v-on="on"
-                  src="https://sleepingdragons.eu/wp-content/uploads/2020/05/realraid.png" />
-              </template>
-              <span>Savage Raid Weapon</span>
-            </v-tooltip>
-          </td>
-          <td></td>
-          <td></td>
-          <td>
-            <v-tooltip bottom>
-            <template v-slot:activator="{ on, attrs }">
-                <img
-                  v-bind="attrs"
-                  v-on="on"
-                  src="https://sleepingdragons.eu/wp-content/uploads/2020/05/dungeon-1.png" />
-              </template>
-              <span>Dungeon Gear</span>
-            </v-tooltip>
-          </td>
-        </tr>
-        <tr> 
-          <td>640</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>
-            <v-tooltip bottom>
-            <template v-slot:activator="{ on, attrs }">
-                <img
-                  v-bind="attrs"
-                  v-on="on"
-                  src="https://sleepingdragons.eu/wp-content/uploads/2020/05/raid.png" />
-              </template>
-              <span>Normal Raid 9-12 (Weekly)</span>
-            </v-tooltip>
-            <v-tooltip bottom>
-            <template v-slot:activator="{ on, attrs }">
-                <img
-                  v-bind="attrs"
-                  v-on="on"
-                  src="https://sleepingdragons.eu/wp-content/uploads/2020/05/crafted-1.png" />
-              </template>
-              <span>Crafted Gear</span>
-            </v-tooltip>
-          </td>
-          <td></td>
-        </tr>
-        <tr> 
-          <td>645</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>
-            <v-tooltip bottom>
-            <template v-slot:activator="{ on, attrs }">
-                <img
-                  v-bind="attrs"
-                  v-on="on"
-                  src="https://sleepingdragons.eu/wp-content/uploads/2020/05/trial-1.png" />
-              </template>
-              <span>EX Trial (Weapon)</span>
-            </v-tooltip>
-          </td>
-          <td></td>
-        </tr>
-        <tr> 
-          <td>650</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>
-            <v-tooltip bottom>
-            <template v-slot:activator="{ on, attrs }">
-                <img
-                  v-bind="attrs"
-                  v-on="on"
-                  src="https://sleepingdragons.eu/wp-content/uploads/2020/05/roulette.png" />
-              </template>
-              <span>Tomestone Gear (Weekly)</span>
-            </v-tooltip>
-          </td>
-          <td>
-            <v-tooltip bottom>
-            <template v-slot:activator="{ on, attrs }">
-                <img
-                  v-bind="attrs"
-                  v-on="on"
-                  src="https://sleepingdragons.eu/wp-content/uploads/2020/05/raid.png" />
-              </template>
-              <span>24-man Raid No.3 (Weekly)</span>
-            </v-tooltip>
-          </td>
-        </tr>
-        <tr> 
-          <td>655</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>
-            <v-tooltip bottom>
-            <template v-slot:activator="{ on, attrs }">
-                <img
-                  v-bind="attrs"
-                  v-on="on"
-                  src="https://sleepingdragons.eu/wp-content/uploads/2020/05/trial-1.png" />
-              </template>
-              <span>EX Trial (Weapon)</span>
-            </v-tooltip>
-          </td>
-        </tr>
-        <tr> 
-          <td>660</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>
-            <v-tooltip bottom>
-            <template v-slot:activator="{ on, attrs }">
-                <img
-                  v-bind="attrs"
-                  v-on="on"
-                  max-height="max-content"
-                  src="https://sleepingdragons.eu/wp-content/uploads/2020/05/realraid.png" />
-              </template>
-              <span>Savage Raid Gear</span>
-            </v-tooltip>
-            <v-tooltip bottom>
-            <template v-slot:activator="{ on, attrs }">
-                <img
-                  v-bind="attrs"
-                  v-on="on"
-                  src="https://sleepingdragons.eu/wp-content/uploads/2020/05/roulette.png" />
-              </template>
-              <span>Upgraded Tomestone Gear</span>
-            </v-tooltip>
-          </td>
-          <td></td>
-        </tr>
-        <tr> 
-          <td>665</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>
-            <v-tooltip bottom>
-            <template v-slot:activator="{ on, attrs }">
-                <img
-                  v-bind="attrs"
-                  v-on="on"
-                  src="https://sleepingdragons.eu/wp-content/uploads/2020/05/realraid.png" />
-              </template>
-              <span>Savage Raid Weapon</span>
-            </v-tooltip>
-          </td>
-          <td></td>
-        </tr>
-      </tbody>
-    </template>
-  </v-simple-table>
-    </v-sheet>
+    <v-card-title style="justify-content: center;" class="text-caption">
+    Endwalker Information is based on past expansions' content cycle and will be updated as information comes out
+    </v-card-title>
+    <v-simple-table>
+      <template v-slot:default>
+        <thead>
+          <tr>
+            <th v-for="patch in headers" :key="patch" class="text-left">
+              {{ patch.text }}
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="content in content" :key="content" >
+            <td>
+              {{ content.ilvl }}
+            </td>
+            <td>
+              <v-tooltip bottom>
+                <template v-slot:activator="{ on, attrs }">
+                  <div class="d-flex flex-row">
+                  <div v-for="icon in content.patchZeroIcons" :key="icon">
+                  <img
+                    v-bind="attrs"
+                    v-on="on"
+                    :src="icon.icon" />
+                  </div>
+                  </div>
+                </template>
+                <v-card-text class="text-body-1">
+                  {{ content.patchZero }}
+                </v-card-text>
+              </v-tooltip>
+            </td>
+            <td>
+              <v-tooltip bottom>
+                <template v-slot:activator="{ on, attrs }">
+                  <div class="d-flex flex-row">
+                  <div v-for="icon in content.patchOneIcons" :key="icon">
+                  <img
+                    v-bind="attrs"
+                    v-on="on"
+                    :src="icon.icon" />
+                  </div>
+                  </div>
+                </template>
+                <v-card-text class="text-body-1">
+                  {{ content.patchOne }}
+                </v-card-text>
+              </v-tooltip>
+            </td>
+            <td>
+              <v-tooltip bottom>
+                <template v-slot:activator="{ on, attrs }">
+                  <div class="d-flex flex-row">
+                  <div v-for="icon in content.patchTwoIcons" :key="icon">
+                  <img
+                    v-bind="attrs"
+                    v-on="on"
+                    :src="icon.icon" />
+                  </div>
+                  </div>
+                </template>
+                <v-card-text class="text-body-1">
+                  {{ content.patchTwo }}
+                </v-card-text>
+              </v-tooltip>
+            </td>
+            <td>
+              <v-tooltip bottom>
+                <template v-slot:activator="{ on, attrs }">
+                  <div class="d-flex flex-row">
+                  <div v-for="icon in content.patchThreeIcons" :key="icon">
+                  <img
+                    v-bind="attrs"
+                    v-on="on"
+                    :src="icon.icon" />
+                  </div>
+                  </div>
+                </template>
+                <v-card-text class="text-body-1">
+                  {{ content.patchThree }}
+                </v-card-text>
+              </v-tooltip>
+            </td>
+            <td>
+              <v-tooltip bottom>
+                <template v-slot:activator="{ on, attrs }">
+                  <div class="d-flex flex-row">
+                  <div v-for="icon in content.patchFourIcons" :key="icon">
+                  <img
+                    v-bind="attrs"
+                    v-on="on"
+                    :src="icon.icon" />
+                  </div>
+                  </div>
+                </template>
+                <v-card-text class="text-body-1">
+                  {{ content.patchFour }}
+                </v-card-text>
+              </v-tooltip>
+            </td>
+            <td>
+              <v-tooltip bottom>
+                <template v-slot:activator="{ on, attrs }">
+                  <div class="d-flex flex-row">
+                  <div v-for="icon in content.patchFiveIcons" :key="icon">
+                  <img
+                    v-bind="attrs"
+                    v-on="on"
+                    :src="icon.icon" />
+                  </div>
+                  </div>
+                </template>
+                <v-card-text class="text-body-1">
+                  {{ content.patchFive }}
+                </v-card-text>
+              </v-tooltip>
+            </td>
+          </tr>
+        </tbody>
+      </template>
+    </v-simple-table>
+  </v-sheet>
 </template>
 
+<style scoped>
+.v-card__text{
+    white-space: pre;
+}
+</style>
+
 <script>
-import dungeon from '../../assets/dungeon.png'
-import crafted from '../../assets/crafted.png'
-import quest from '../../assets/quest.png'
-import raid from '../../assets/raid.png'
-import savage from '../../assets/savage.png'
-import tomestone from '../../assets/tomestone.png'
-import trial from '../../assets/trial.png'
+const crafted = require('../../assets/crafted.png')
+const dungeon = require('../../assets/dungeon.png')
+const quest = require('../../assets/quest.png')
+const raid = require('../../assets/raid.png')
+const savage = require('../../assets/savage.png')
+const tomestone = require('../../assets/tomestone.png')
+const trial = require('../../assets/trial.png')
 
   export default {
     data: () => {
       return {
-        images: {
-          dungeon,
-          crafted,
-          quest,
-          raid,
-          savage,
-          tomestone,
-          trial,
-        }
-      }
+         headers: [
+          {
+            text: '',
+            align: 'start',
+            sortable: false,
+            value: 'ilvl',
+          },
+          { text: '6.0', value: 'patchZero' },
+          { text: '6.1', value: 'patchOne' },
+          { text: '6.2', value: 'patchTwo' },
+          { text: '6.3', value: 'patchThree' },
+          { text: '6.4', value: 'patchFour' },
+          { text: '6.5', value: 'patchFive' },
+        ],
+        content: [
+           {
+              ilvl: '560',
+              patchZero: 'Quest Gear\nDungeon Gear',
+              patchZeroIcons: [
+                    { icon: quest }, 
+                    { icon: dungeon }, 
+                ],
+           },
+           {
+              ilvl: '570',
+              patchZero: 'Tomestone Gear',
+              patchZeroIcons: [
+                    { icon: tomestone }, 
+                ],
+              patchOne: 'Dungeon Gear (iLvl 575)',
+              patchOneIcons: [
+                    { icon: dungeon }, 
+                ],
+           },
+           {
+              ilvl: '580',
+              patchZero: 'EX Trial (Weapon + Accessories)\nNormal Raid 1-4 (Weekly)\nCrafted Gear',
+              patchZeroIcons: [
+                    { icon: trial }, 
+                    { icon: raid }, 
+                    { icon: crafted }, 
+                ],
+              patchTwo: 'Dungeon Gear (iLvl 585)',
+              patchTwoIcons: [
+                    { icon: dungeon }, 
+                ],
+           },
+           {
+              ilvl: '590',
+              patchZero: 'Tomestone Gear (Weekly)',
+              patchZeroIcons: [
+                    { icon: tomestone }, 
+                ],
+              patchOne: '24-man raid No.1 (Weekly)\nEX Trial (Weapon)',
+              patchOneIcons: [
+                    { icon: raid }, 
+                    { icon: trial }, 
+                ],
+              patchTwo: 'Tomestone Gear (Unlimited)',
+              patchTwoIcons: [
+                    { icon: tomestone }, 
+                ],
+           },
+           {
+              ilvl: '600',
+              patchZero: 'Upgraded Tomestone Gear\nSavage Raid Gear\nSavage Raid Weapon (iLvl 605)',
+              patchZeroIcons: [
+                    { icon: tomestone }, 
+                    { icon: savage }, 
+                ],
+              patchThree: 'Dungeon Gear (iLvl 605)',
+              patchThreeIcons: [
+                    { icon: dungeon }, 
+                ],
+           },
+           {
+              ilvl: '610',
+              patchTwo: 'Normal Raid 5-8 (Weekly)\nCrafted Gear\nEX Trial (Weapon) (iLvl 615)',
+              patchTwoIcons: [
+                    { icon: raid }, 
+                    { icon: crafted }, 
+                    { icon: trial }, 
+                ],
+              patchFour: 'Dungeon Gear (iLvl 615)',
+              patchFourIcons: [
+                    { icon: dungeon }, 
+                ],
+           },
+           {
+              ilvl: '620',
+              patchTwo: 'Tomestone Gear (Weekly)',
+              patchTwoIcons: [
+                    { icon: tomestone }, 
+                ],
+              patchThree: '24-man Raid No.2 (Weekly)\nEX Trial (Weapon) (iLvl 625)',
+              patchThreeIcons: [
+                    { icon: raid }, 
+                    { icon: trial }, 
+                ],
+              patchFour: 'Tomestone Gear (Unlimited)',
+              patchFourIcons: [
+                    { icon: tomestone },
+                ],
+           },
+           {
+              ilvl: '630',
+              patchTwo: 'Upgraded Tomestone Gear\nSavage Raid Gear\nSavage Raid Weapon (iLvl 635)',
+              patchTwoIcons: [
+                    { icon: tomestone }, 
+                    { icon: savage }, 
+                ],
+              patchFive: 'Dungeon Gear (iLvl 635)',
+              patchFiveIcons: [ 
+                    { icon: dungeon }, 
+                ],
+           },
+           {
+              ilvl: '640',
+              patchFour: 'Normal Raid 9-12 (Weekly)\nCrafted Gear\nEX Trial (Weapon)',
+              patchFourIcons: [
+                    { icon: raid }, 
+                    { icon: crafted }, 
+                    { icon: trial }, 
+                ],
+           },
+           {
+              ilvl: '650',
+              patchFour: 'Tomestone Gear (Weekly)',
+              patchFourIcons: [
+                    { icon: tomestone }, 
+                ],
+              patchFive: '24-man Raid No.3 (Weekly)\nEX Trial (Weapon) (iLvl 655)',
+              patchFiveIcons: [
+                    { icon: raid }, 
+                    { icon: trial }, 
+                ],
+           },
+           {
+              ilvl: '660',
+              patchFour: 'Upgraded Tomestone Gear\nSavage Raid Gear\nSavage Raid Weapon (iLvl 665)',
+              patchFourIcons: [
+                    { icon: tomestone }, 
+                    { icon: savage }, 
+                ],
+           },
+        ]
     }
   }
+}
 </script>
