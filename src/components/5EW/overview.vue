@@ -642,3 +642,29 @@
   </v-simple-table>
     </v-sheet>
 </template>
+
+<script>
+import dungeon from '../../assets/dungeon.png'
+import crafted from '../../assets/crafted.png'
+import quest from '../../assets/quest.png'
+import raid from '../../assets/raid.png'
+import savage from '../../assets/savage.png'
+import tomestone from '../../assets/tomestone.png'
+import trial from '../../assets/trial.png'
+
+  export default {
+    data: () => {
+      return {
+        images: {
+          dungeon,
+          crafted,
+          quest,
+          raid,
+          savage,
+          tomestone,
+          trial,
+        }
+      }
+    }
+  }
+</script>
