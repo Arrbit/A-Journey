@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
+import Introduction from  '../components/Introduction'
 import EmptyRouterView from  '../components/EmptyRouterView'
 import PageNotFound from  '../components/PageNotFound'
 
@@ -27,8 +28,17 @@ import ARRpatch from  '../components/1ARR/patch'
 Vue.use(VueRouter)
 
 const routes = [
-  { path: "*", component: PageNotFound },
   {
+    path: '/prelude',
+    component: EmptyRouterView,
+    children: [{
+      name: 'Prelude',
+      path: '',
+      component: Introduction
+    }]
+  },
+
+    {
     path: '/a-realm-reborn',
     component: EmptyRouterView,
     children: [{
@@ -118,6 +128,12 @@ const routes = [
       component: EWpatch
     }]
   },
+  { path: "*", component: EmptyRouterView,
+  children: [{
+    name: '404',
+    path: '',
+    component: PageNotFound
+  }]},
 ]
 
 const router = new VueRouter({

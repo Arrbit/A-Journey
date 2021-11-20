@@ -14,14 +14,6 @@
 
                 <v-divider class="my-2"></v-divider>
 
-                <v-list-item v-for="mode in modes" :key="mode.text" :to="currentxpac + mode.route" link>
-                    <v-list-item-content>
-                        <v-list-item-title>
-                            {{mode.text}}
-                        </v-list-item-title>
-                    </v-list-item-content>
-                </v-list-item>
-
             </v-list>
         </v-navigation-drawer>
 

@@ -44,9 +44,9 @@
                             </v-list-item-content>
                         </v-list-item>
 
-                        <v-divider class="my-2"></v-divider>
+                        <v-divider v-show="$route.name!='404' && $route.name!='Prelude'" class="my-2"></v-divider>
 
-                        <v-list-item v-for="mode in modes" :key="mode.text" :to="currentxpac + mode.route" link>
+                        <v-list-item v-show="$route.name!='404' && $route.name!='Prelude'" v-for="mode in modes" :key="mode.text" :to="currentxpac + mode.route" link>
                             <v-list-item-content>
                                 <v-list-item-title>
                                     {{mode.text}}
@@ -60,7 +60,6 @@
 
             <v-col>
                 <router-view />
-
             </v-col>
         </v-row>
     </v-container>
@@ -86,6 +85,10 @@ export default {
         ],
 
         xpacs: [{
+                text: 'Prelude',
+                route: '/prelude'
+            },
+            {
                 text: 'A Realm Reborn',
                 route: '/a-realm-reborn'
             },
