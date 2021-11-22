@@ -30,6 +30,13 @@
 
     <router-view />
 
+    <v-bottom-navigation dark class="d-sm-flex d-flex d-md-none" grow app >
+        <v-btn v-for="xpac in xpacs" :key="xpac.text" :to="xpac.route" link>
+            {{xpac.text}}
+        </v-btn>
+    </v-bottom-navigation>
+
+
     <v-footer padless>
 
         <v-card flat tile width="100%" class="lighten-4 grey text-center black--text">
@@ -94,6 +101,29 @@ export default {
                 href: 'https://www.netlify.com/gdpr-ccpa/'
             },
         ],
+        xpacs: [
+            {
+                text: 'ARR',
+                route: '/a-realm-reborn'
+            },
+            {
+                text: 'HW',
+                route: '/heavensward'
+            },
+            {
+                text: 'SB',
+                route: '/stormblood'
+            },
+            {
+                text: 'SH',
+                route: '/shadowbringers'
+              },
+            {
+                text: 'EW',
+                route: '/endwalker'
+            }
+        ]
+
     }),
 };
 </script>
