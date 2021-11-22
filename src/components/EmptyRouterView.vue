@@ -19,22 +19,24 @@
                         </v-list-item-title>
                     </v-list-item-content>
                 </v-list-item>
-
             </v-list>
         </v-navigation-drawer>
 
     <v-container fluid>
 
         <v-row>
-            <v-col class="d-sm-none d-none d-md-block" cols="1">
-                <router-link to="/">
-                    <v-img contain height="200" class="img_flip ma-3" alt="SDS Logo" src="https://sleepingdragons.eu/wp-content/themes/New-Sleeping-Dragons/assets/logos/VectorRed_Transparent.png" />
-                </router-link>
-            </v-col>
+            <v-col class="d-sm-none d-none d-md-block" lg="3" xl="2" md="3">
+                <v-card class="mx-auto">
+                    <router-link to="/">
+                        <v-img contain max-height="200" class="img_flip" alt="SDS Logo" src="https://sleepingdragons.eu/wp-content/themes/New-Sleeping-Dragons/assets/logos/VectorRed_Transparent.png" />
+                    </router-link>
 
-            <v-col class="d-sm-none d-none d-md-block" cols="1">
+                    <v-card-title class="text-center">
+                        SleepingDragons
+                    </v-card-title>
 
-                <v-card class="mx-auto" max-width="300">
+                    <v-divider />
+                    
                     <v-list>
                         <v-list-item v-for="xpac in xpacs" :key="xpac.text" :to="xpac.route" @click="savexpac(xpac.route)" link>
                             <v-list-item-content>
@@ -44,9 +46,9 @@
                             </v-list-item-content>
                         </v-list-item>
 
-                        <v-divider class="my-2"></v-divider>
+                        <v-divider v-show="$route.name!='404' && $route.name!='Prelude'" class="my-2"></v-divider>
 
-                        <v-list-item v-for="mode in modes" :key="mode.text" :to="currentxpac + mode.route" link>
+                        <v-list-item v-show="$route.name!='404' && $route.name!='Prelude'" v-for="mode in modes" :key="mode.text" :to="currentxpac + mode.route" link>
                             <v-list-item-content>
                                 <v-list-item-title>
                                     {{mode.text}}
@@ -60,7 +62,6 @@
 
             <v-col>
                 <router-view />
-
             </v-col>
         </v-row>
     </v-container>
@@ -86,6 +87,10 @@ export default {
         ],
 
         xpacs: [{
+                text: 'Prelude',
+                route: '/prelude'
+            },
+            {
                 text: 'A Realm Reborn',
                 route: '/a-realm-reborn'
             },

@@ -14,14 +14,6 @@
 
                 <v-divider class="my-2"></v-divider>
 
-                <v-list-item v-for="mode in modes" :key="mode.text" :to="currentxpac + mode.route" link>
-                    <v-list-item-content>
-                        <v-list-item-title>
-                            {{mode.text}}
-                        </v-list-item-title>
-                    </v-list-item-content>
-                </v-list-item>
-
             </v-list>
         </v-navigation-drawer>
 
@@ -37,6 +29,13 @@
     </v-app-bar>
 
     <router-view />
+
+    <v-bottom-navigation dark class="d-sm-flex d-flex d-md-none" grow app >
+        <v-btn v-for="xpac in xpacs" :key="xpac.text" :to="xpac.route" link>
+            {{xpac.text}}
+        </v-btn>
+    </v-bottom-navigation>
+
 
     <v-footer padless>
 
@@ -102,6 +101,29 @@ export default {
                 href: 'https://www.netlify.com/gdpr-ccpa/'
             },
         ],
+        xpacs: [
+            {
+                text: 'ARR',
+                route: '/a-realm-reborn'
+            },
+            {
+                text: 'HW',
+                route: '/heavensward'
+            },
+            {
+                text: 'SB',
+                route: '/stormblood'
+            },
+            {
+                text: 'SH',
+                route: '/shadowbringers'
+              },
+            {
+                text: 'EW',
+                route: '/endwalker'
+            }
+        ]
+
     }),
 };
 </script>
