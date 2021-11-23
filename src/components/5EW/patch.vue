@@ -7,17 +7,17 @@
             <v-card-title style="justify-content: center;" class="text-caption">
             Endwalker Information is based on past expansions' content cycle and will be updated as information comes out
             </v-card-title>
-              <v-expansion-panels accordion>
-                <v-expansion-panel v-for="patch in endwalker.patches" :key="patch">
-                  <v-expansion-panel-header class="text-h6  text-center" @click="reveal = false; reveal2 = false; reveal3 = false; reveal4 = false; reveal5 = false; reveal6 = false;">
+                <v-card rounded elevation="0" class="mb-5" v-for="patch in endwalker.patches" :key="patch">
+                  <v-card-title class="text-h6 font-weight-bold header" style="justify-content: center;">
                     {{ patch.name }}
-                  </v-expansion-panel-header>
-                  <v-expansion-panel-content>
+                  </v-card-title>
+                  <v-divider /> 
+                  <v-card-text>
                      <v-row>
                         <v-col v-for="content in patch.content" :key="content.ilvl">
                            <v-tooltip bottom>
                               <template v-slot:activator="{ on, attrs }">
-                                 <v-card elevation="0" class="pb-5" style="display: grid; justify-content: center;" v-bind="attrs" v-on="on">
+                                 <v-card rounded elevation="0" class="pb-5" style="display: grid; justify-content: center;" v-bind="attrs" v-on="on">
                                   <v-card-title>{{ content.ilvl }} iLvl</v-card-title>
                                     <div class="d-flex flex-row" style="justify-content: center;">
                                        <div v-for="type in content.type" :key="type">
@@ -47,26 +47,34 @@
                            </v-tooltip>
                         </v-col>
                      </v-row>
-                  </v-expansion-panel-content>
-                </v-expansion-panel>
-              </v-expansion-panels>
+                  </v-card-text>
+                </v-card>
             </v-sheet>
 </template>
 
 <style scoped>
-.v-expansion-panel-header--active{
-  color: #0091ea;
+.header{
+  color: #0091ea !important;
 }
-.v-expansion-panel--active{
-  background-color: #e8e8e8 !important;
+
+.v-card__title{
+  color: #3c3c3c;
 }
 
 .v-card{
   background-color: #e8e8e8;
 }
 
+.v-card:hover{
+  background-color: #dbdbdb;
+}
+
 .v-card__text{
     white-space: pre;
+}
+.v-divider{
+  margin-right: 500px;
+  margin-left: 500px;
 }
 </style>
 
