@@ -729,6 +729,317 @@ const expacs = {
                 },
             ]
             },
+        ],
+        overview: [
+            {   
+                patchZero: [
+                    {
+                        text: 'Dungeon Gear',
+                        gearType: null,
+                        weekly: false,
+                        icon: dungeon,
+                    },
+                    { 
+                        text: 'Quest Gear',
+                        gearType: null,
+                        weekly: false,
+                        icon: quest,
+                    }
+                ],
+                ilvl: '560',
+             },
+             {
+                ilvl: '570',
+                patchZero: [
+                    {
+                        text: 'Tomestone Gear',
+                        gearType: null,
+                        weekly: false,
+                        icon: tomestone,
+                    },
+                ],
+                patchOne: [
+                    {
+                        text: 'Dungeon Gear',
+                        gearType: null,
+                        weekly: false,
+                        icon: dungeon,
+                        midIlvl: '575',
+                    },
+                ],
+             },
+             {
+                ilvl: '580',
+                patchZero: [
+                    {
+                        text: 'Extreme Trial',
+                        gearType: 'Weapon + Accessories',
+                        weekly: false,
+                        icon: trial,
+                    },
+                    {
+                        text: 'Normal Raid 1-4',
+                        gearType: null,
+                        weekly: true,
+                        icon: raid,
+                    },
+                    {
+                        text: 'Crafted Gear',
+                        gearType: null,
+                        weekly: false,
+                        icon: crafted,
+                    },
+                ],
+                patchTwo: [
+                    {
+                        text: 'Dungeon Gear',
+                        gearType: null,
+                        weekly: false,
+                        icon: dungeon,
+                        midIlvl: '585',
+                    },
+                ],
+             },
+             {
+                ilvl: '590',
+                patchZero: [
+                    {
+                        text: 'Tomestone Gear',
+                        gearType: null,
+                        weekly: true,
+                        icon: tomestone,
+                    },
+                ],
+                patchOne: [
+                    {
+                        text: 'Extreme Trial',
+                        gearType: 'Weapon',
+                        weekly: false,
+                        icon: trial,
+                    },
+                    {
+                        text: '24-man raid No.1',
+                        gearType: null,
+                        weekly: true,
+                        icon: raid,
+                    },
+                ],
+                patchTwo: [
+                    {
+                        text: 'Tomestone Gear',
+                        gearType: 'Unlimited',
+                        weekly: false,
+                        icon: tomestone,
+                    },
+                ],
+             },
+             {
+                ilvl: '600',
+                patchZero: [
+                    {
+                        text: 'Upgraded Tomestone Gear',
+                        gearType: null,
+                        weekly: true,
+                        icon: tomestone,
+                    },
+                    {
+                        text: 'Savage Raid 1-4',
+                        gearType: null,
+                        weekly: true,
+                        icon: savage,
+                    },
+                    {
+                        text: 'Savage Raid 4',
+                        gearType: 'Weapon',
+                        weekly: true,
+                        icon: null,
+                        midIlvl: '605'
+                    },
+                ],
+                patchThree: [
+                    {
+                        text: 'Dungeon Gear',
+                        gearType: null,
+                        weekly: false,
+                        icon: dungeon,
+                        midIlvl: '605',
+                    },
+                ],
+             },
+             {
+                ilvl: '610',
+                patchTwo: [
+                    {
+                        text: 'Extreme Trial',
+                        gearType: 'Weapon',
+                        weekly: false,
+                        icon: trial,
+                        midIlvl: '615'
+                    },
+                    {
+                        text: 'Normal Raid 5-8',
+                        gearType: null,
+                        weekly: true,
+                        icon: raid,
+                    },
+                    {
+                        text: 'Crafted Gear',
+                        gearType: null,
+                        weekly: false,
+                        icon: crafted,
+                    },
+                ],
+                patchFour: [
+                    {
+                        text: 'Dungeon Gear',
+                        gearType: null,
+                        weekly: false,
+                        icon: dungeon,
+                        midIlvl: '615',
+                    },
+                ]
+             },
+             {
+                ilvl: '620',
+                patchTwo: [
+                    {
+                        text: 'Tomestone Gear',
+                        gearType: null,
+                        weekly: true,
+                        icon: tomestone,
+                    },
+                ],
+                patchThree: [
+                    {
+                        text: 'Extreme Trial',
+                        gearType: 'Weapon',
+                        weekly: false,
+                        icon: trial,
+                        midIlvl: '625'
+                    },
+                    {
+                        text: '24-man raid No.2',
+                        gearType: null,
+                        weekly: true,
+                        icon: raid,
+                    },
+                ],
+                patchFour: [
+                    {
+                        text: 'Tomestone Gear',
+                        gearType: 'Unlimited',
+                        weekly: false,
+                        icon: tomestone,
+                    },
+                ],
+             },
+             {
+                ilvl: '630',
+                patchTwo: [
+                    {
+                        text: 'Upgraded Tomestone Gear',
+                        gearType: null,
+                        weekly: true,
+                        icon: tomestone,
+                    },
+                    {
+                        text: 'Savage Raid 5-8',
+                        gearType: null,
+                        weekly: true,
+                        icon: savage,
+                    },
+                    {
+                        text: 'Savage Raid 8',
+                        gearType: 'Weapon',
+                        weekly: true,
+                        icon: null,
+                        midIlvl: '635'
+                    }, 
+                  ],
+                patchFive: [
+                    {
+                        text: 'Dungeon Gear',
+                        gearType: null,
+                        weekly: false,
+                        icon: dungeon,
+                        midIlvl: '635',
+                    },
+                ]
+             },
+             {
+                ilvl: '640',
+                patchFour: [
+                    {
+                        text: 'Extreme Trial',
+                        gearType: 'Weapon',
+                        weekly: false,
+                        icon: trial,
+                        midIlvl: '645'
+                    },
+                    {
+                        text: 'Normal Raid 9-12',
+                        gearType: null,
+                        weekly: true,
+                        icon: raid,
+                    },
+                    {
+                        text: 'Crafted Gear',
+                        gearType: null,
+                        weekly: false,
+                        icon: crafted,
+                    },
+                  ],
+             },
+             {
+                ilvl: '650',
+                patchFour: [
+                    {
+                        text: 'Tomestone Gear',
+                        gearType: null,
+                        weekly: true,
+                        icon: tomestone,
+                    }, 
+                ],
+                patchFive: [
+                    {
+                        text: 'Extreme Trial',
+                        gearType: 'Weapon',
+                        weekly: false,
+                        icon: trial,
+                        midIlvl: '655'
+                    },
+                    {
+                        text: '24-man raid No.3',
+                        gearType: null,
+                        weekly: true,
+                        icon: raid,
+                    },
+                  ],
+             },
+             {
+                ilvl: '660',
+                patchFour: [
+                    {
+                        text: 'Upgraded Tomestone Gear',
+                        gearType: null,
+                        weekly: true,
+                        icon: tomestone,
+                    },
+                    {
+                        text: 'Savage Raid 9-12',
+                        gearType: null,
+                        weekly: true,
+                        icon: savage,
+                    },
+                    {
+                        text: 'Savage Raid 12',
+                        gearType: 'Weapon',
+                        weekly: true,
+                        icon: null,
+                        midIlvl: '665'
+                    }, 
+                  ],
+             },
         ]
     },
     shadowbringers: {
