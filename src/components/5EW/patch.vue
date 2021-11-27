@@ -30,9 +30,9 @@
                                     </div>
                                  </v-card>
                               </template>
-                              <v-card-text v-for="type in content.type" :key="type" class="text-body-1">
+                              <v-card-text v-for="type in content.type" :key="type" class="text-h6">
                                  {{ type.text }}
-                                 <v-card-text v-if="type.weekly!=false || type.gearType!=null || type.midPatch!=null">
+                                 <v-card-text class="text-body-1" v-if="type.weekly!=false || type.gearType!=null || type.midPatch!=null">
                                   <v-row>
                                     <template v-if="type.weekly!=false">Weekly</template>
                                     <template v-if="type.weekly!=false && type.gearType!=null || type.weekly!=false && type.midPatch!=null"><v-divider vertical class="mx-3"></v-divider></template>

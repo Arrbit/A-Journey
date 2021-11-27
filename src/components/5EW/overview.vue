@@ -35,9 +35,9 @@
                       </div>
                   </div>
                 </template>
-                <v-card-text v-for="content in overview.patchZero" :key="content" class="text-body-1">
+                <v-card-text v-for="content in overview.patchZero" :key="content" class="text-h6">
                     {{ content.text }}
-                    <v-card-text v-if="content.weekly!=false || content.gearType!=null || content.midPatch!=null">
+                    <v-card-text class="text-body-1" v-if="content.weekly!=false || content.gearType!=null || content.midPatch!=null">
                       <v-row>
                         <template v-if="content.weekly!=false">Weekly</template>
                         <template v-if="content.weekly!=false && content.gearType!=null || content.weekly!=false && content.midPatch!=null"><v-divider vertical class="mx-3"></v-divider></template>
@@ -64,9 +64,9 @@
                       </div>
                   </div>
                 </template>
-                <v-card-text v-for="content in overview.patchOne" :key="content" class="text-body-1">
+                <v-card-text v-for="content in overview.patchOne" :key="content" class="text-h6">
                     {{ content.text }}
-                    <v-card-text v-if="content.weekly!=false || content.gearType!=null || content.midPatch!=null || content.midIlvl!=null">
+                    <v-card-text class="text-body-1" v-if="content.weekly!=false || content.gearType!=null || content.midPatch!=null || content.midIlvl!=null">
                       <v-row>
                         <template v-if="content.weekly!=false">Weekly</template>
                         <template v-if="content.weekly!=false && content.gearType!=null || content.weekly!=false && content.midPatch!=null"><v-divider vertical class="mx-3"></v-divider></template>
@@ -93,9 +93,9 @@
                       </div>
                   </div>
                 </template>
-                <v-card-text v-for="content in overview.patchTwo" :key="content" class="text-body-1">
+                <v-card-text v-for="content in overview.patchTwo" :key="content" class="text-h6">
                     {{ content.text }}
-                    <v-card-text v-if="content.weekly!=false || content.gearType!=null || content.midPatch!=null || content.midIlvl!=null">
+                    <v-card-text class="text-body-1" v-if="content.weekly!=false || content.gearType!=null || content.midPatch!=null || content.midIlvl!=null">
                       <v-row>
                         <template v-if="content.weekly!=false">Weekly</template>
                         <template v-if="content.weekly!=false && content.gearType!=null || content.weekly!=false && content.midPatch!=null"><v-divider vertical class="mx-3"></v-divider></template>
@@ -122,9 +122,9 @@
                       </div>
                   </div>
                 </template>
-                <v-card-text v-for="content in overview.patchThree" :key="content" class="text-body-1">
+                <v-card-text v-for="content in overview.patchThree" :key="content" class="text-h6">
                     {{ content.text }}
-                    <v-card-text v-if="content.weekly!=false || content.gearType!=null || content.midPatch!=null || content.midIlvl!=null">
+                    <v-card-text class="text-body-1" v-if="content.weekly!=false || content.gearType!=null || content.midPatch!=null || content.midIlvl!=null">
                       <v-row>
                         <template v-if="content.weekly!=false">Weekly</template>
                         <template v-if="content.weekly!=false && content.gearType!=null || content.weekly!=false && content.midPatch!=null"><v-divider vertical class="mx-3"></v-divider></template>
@@ -151,9 +151,9 @@
                       </div>
                   </div>
                 </template>
-                <v-card-text v-for="content in overview.patchFour" :key="content" class="text-body-1">
+                <v-card-text v-for="content in overview.patchFour" :key="content" class="text-h6">
                     {{ content.text }}
-                    <v-card-text v-if="content.weekly!=false || content.gearType!=null || content.midPatch!=null || content.midIlvl!=null">
+                    <v-card-text class="text-body-1" v-if="content.weekly!=false || content.gearType!=null || content.midPatch!=null || content.midIlvl!=null">
                       <v-row>
                         <template v-if="content.weekly!=false">Weekly</template>
                         <template v-if="content.weekly!=false && content.gearType!=null || content.weekly!=false && content.midPatch!=null"><v-divider vertical class="mx-3"></v-divider></template>
@@ -180,9 +180,9 @@
                       </div>
                   </div>
                 </template>
-                <v-card-text v-for="content in overview.patchFive" :key="content" class="text-body-1">
+                <v-card-text v-for="content in overview.patchFive" :key="content" class="text-h6">
                     {{ content.text }}
-                    <v-card-text v-if="content.weekly!=false || content.gearType!=null || content.midPatch!=null || content.midIlvl!=null">
+                    <v-card-text class="text-body-1" v-if="content.weekly!=false || content.gearType!=null || content.midPatch!=null || content.midIlvl!=null">
                       <v-row>
                         <template v-if="content.weekly!=false">Weekly</template>
                         <template v-if="content.weekly!=false && content.gearType!=null || content.weekly!=false && content.midPatch!=null"><v-divider vertical class="mx-3"></v-divider></template>
