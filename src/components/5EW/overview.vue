@@ -7,7 +7,7 @@
     <v-card-title style="justify-content: center;" class="text-caption">
     Endwalker Information is based on past expansions' content cycle and will be updated as information comes out
     </v-card-title>
-    <v-simple-table>
+    <v-simple-table fixed-header height="70vh">
       <template v-slot:default>
         <thead>
           <tr>
@@ -19,7 +19,7 @@
         </thead>
         <tbody>
           <tr v-for="overview in endwalker.overview" :key="overview">
-            <td>
+            <td class="fixed">
               {{ overview.ilvl }}
             </td>
             <td>
@@ -206,6 +206,19 @@
 <style scoped>
 .v-card__text{
     white-space: pre;
+}
+
+.fixed {
+  position: sticky;
+  width: 5em;
+  left: 0;
+  top: auto;
+  z-index: 999;
+  background-color: white;
+  z-index: 1;
+}
+.v-tooltip {
+  z-index: 10;
 }
 </style>
 
