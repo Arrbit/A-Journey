@@ -25,7 +25,7 @@
     <v-container fluid>
 
         <v-row>
-            <v-col class="d-sm-none d-none d-md-block" lg="3" xl="2" md="3">
+            <v-col class="d-sm-none d-none d-md-block" cols="2">
                 <v-card class="mx-auto">
                     <router-link to="/">
                         <v-img contain max-height="200" class="img_flip" alt="SDS Logo" src="https://sleepingdragons.eu/wp-content/themes/New-Sleeping-Dragons/assets/logos/VectorRed_Transparent.png" />
