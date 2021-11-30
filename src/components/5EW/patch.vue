@@ -13,8 +13,8 @@
                   </v-card-title>
                   <v-divider /> 
                   <v-card-text>
-                     <v-row>
-                        <v-col v-for="content in patch.content" :key="content.ilvl">
+                     <v-row justify="space-around">
+                        <v-col cols="12" md="6" lg="4" v-for="content in patch.content" :key="content.ilvl">
                            <v-tooltip bottom>
                               <template v-slot:activator="{ on, attrs }">
                                  <v-card elevation="1" class="pb-5 rounded-b-xl insideCard" style="display: grid; justify-content: center;" v-bind="attrs" v-on="on">

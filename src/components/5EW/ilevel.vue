@@ -18,8 +18,8 @@
                   </v-card-title>
                   <v-divider />
                   <v-card-text>
-                     <v-row>
-                        <v-col v-for="content in level.content" :key="content.ilvl">
+                      <v-row justify="space-around">
+                        <v-col cols="12" md="6" lg="4" v-for="content in level.content" :key="content.ilvl">
                            <v-tooltip bottom>
                               <template v-slot:activator="{ on, attrs }">
                                  <v-card elevation="1" class="rounded-b-xl mx-2 pb-5 insideCard" style="display: grid; justify-content: center;" v-bind="attrs" v-on="on">
