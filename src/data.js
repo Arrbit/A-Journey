@@ -18,13 +18,13 @@ const expacs = {
                         type: [
                             {
                                 icon: dungeon,
-                                text: 'Dungeon Gear',
+                                text: 'The Dead Ends, The Stigma Dreamscape and Smileton',
                                 gearType: null,
                                 weekly: false,
                             },
                             { 
                                 icon: quest,
-                                text: 'Quest Gear',
+                                text: 'Job Artifact Gear',
                                 gearType: null,
                                 weekly: false,
                             }
@@ -47,15 +47,20 @@ const expacs = {
                         type: [
                             { 
                                 icon: trial,
-                                text: 'Extreme Trial',
-                                gearType: 'Weapon + Accessories',
+                                text: 'Zodiark',
+                                gearType: 'Accessories',
+                                weekly: false,
+                             },
+                             { 
+                                text: 'Hydaelyn',
+                                gearType: 'Weapon',
                                 weekly: false,
                              },
                             { 
                                 icon: raid,
-                                text: 'Normal Raid 1-4',
+                                text: 'Pandaemonium: Asphodelos',
                                 gearType: null,
-                                weekly: true,
+                                weekly: false,
                                 midPatch: '6.01'
                              },
                             { 
@@ -90,14 +95,14 @@ const expacs = {
                             },
                             {
                                 icon: savage,
-                                text: 'Savage Raid 1-4',
+                                text: 'Pandaemonium: Asphodelos (Savage)',
                                 gearType: null,
-                                weekly: true,
+                                weekly: false,
                                 midPatch: '6.05'
                             },
                             {
                                 icon: null,
-                                text: 'Savage Raid 4',
+                                text: 'Asphodelos: The Fourth Circle (Savage)',
                                 gearType: 'Weapon',
                                 weekly: true,
                                 midPatch: '6.05',
@@ -126,7 +131,7 @@ const expacs = {
                         type: [
                             { 
                                 icon: raid,
-                                text: '24-man Raid No.1',
+                                text: 'Myths of the Realm: Aglaia',
                                 weekly: true,
                              },
                         ]
@@ -136,7 +141,7 @@ const expacs = {
                         type: [
                             { 
                                 icon: trial,
-                                text: 'Extreme Trial',
+                                text: `The Minstrel's Ballad: Endsinger's Aria`,
                                 weekly: false,
                                 gearType: 'Weapon',
                              },
@@ -377,13 +382,13 @@ const expacs = {
                     type: [
                         {
                             icon: dungeon,
-                            text: 'Dungeon Gear',
+                            text: 'The Dead Ends, The Stigma Dreamscape and Smileton',
                             gearType: null,
                             weekly: false,
                         },
                         { 
                             icon: quest,
-                            text: 'Quest Gear',
+                            text: 'Job Artifact Gear',
                             gearType: null,
                             weekly: false,
                         }
@@ -424,8 +429,13 @@ const expacs = {
                     type: [
                         {
                             icon: trial,
-                            text: 'Extreme Trial',
-                            gearType: 'Weapon + Accessories',
+                            text: 'Zodiark',
+                            gearType: 'Accessories',
+                            weekly: false,
+                        },
+                        {
+                            text: 'Hydaelyn',
+                            gearType: 'Weapon',
                             weekly: false,
                         },
                     ],
@@ -434,9 +444,9 @@ const expacs = {
                     type: [
                         {
                             icon: raid,
-                            text: 'Normal Raid 1-4',
+                            text: 'Pandaemonium: Asphodelos',
                             gearType: null,
-                            weekly: true,
+                            weekly: false,
                         },
                     ],
                 },
@@ -478,15 +488,15 @@ const expacs = {
                     type: [
                         {
                             icon: raid,
-                            text: '24-man Normal No.1',
+                            text: 'Myths of the Realm: Aglaia',
                             gearType: null,
                             weekly: true,
                         },
                         {
                             icon: trial,
-                            text: 'Extreme Trial',
+                            text: `The Minstrel's Ballad: Endsinger's Aria`,
                             gearType: 'Weapon',
-                            weekly: true,
+                            weekly: false,
                             midIlvl: '595'
                         },
                     ], 
@@ -515,12 +525,12 @@ const expacs = {
                         },
                         {
                             icon: savage,
-                            text: 'Savage Raid 1-4',
-                            weekly: true,
+                            text: 'Pandaemonium: Asphodelos (Savage)',
+                            weekly: false,
                         },
                         {
                             icon: null,
-                            text: 'Savage Raid 4',
+                            text: 'Asphodelos: The Fourth Circle (Savage)',
                             gearType: 'Weapon',
                             midIlvl: '605',
                             weekly: true,
@@ -734,13 +744,13 @@ const expacs = {
             {   
                 patchZero: [
                     {
-                        text: 'Dungeon Gear',
+                        text: 'The Dead Ends, The Stigma Dreamscape and Smileton',
                         gearType: null,
                         weekly: false,
                         icon: dungeon,
                     },
                     { 
-                        text: 'Quest Gear',
+                        text: 'Job Artifact Gear',
                         gearType: null,
                         weekly: false,
                         icon: quest,
@@ -772,15 +782,20 @@ const expacs = {
                 ilvl: '580',
                 patchZero: [
                     {
-                        text: 'Extreme Trial',
-                        gearType: 'Weapon + Accessories',
+                        text: 'Zodiark',
+                        gearType: 'Accessories',
                         weekly: false,
                         icon: trial,
                     },
                     {
-                        text: 'Normal Raid 1-4',
+                        text: 'Hydaelyn',
+                        gearType: 'Weapon',
+                        weekly: false,
+                    },
+                    {
+                        text: 'Pandaemonium: Asphodelos',
                         gearType: null,
-                        weekly: true,
+                        weekly: false,
                         icon: raid,
                     },
                     {
@@ -812,13 +827,13 @@ const expacs = {
                 ],
                 patchOne: [
                     {
-                        text: 'Extreme Trial',
+                        text: `The Minstrel's Ballad: Endsinger's Aria`,
                         gearType: 'Weapon',
                         weekly: false,
                         icon: trial,
                     },
                     {
-                        text: '24-man raid No.1',
+                        text: 'Myths of the Realm: Aglaia',
                         gearType: null,
                         weekly: true,
                         icon: raid,
@@ -843,13 +858,13 @@ const expacs = {
                         icon: tomestone,
                     },
                     {
-                        text: 'Savage Raid 1-4',
+                        text: 'Pandaemonium: Asphodelos (Savage)',
                         gearType: null,
-                        weekly: true,
+                        weekly: false,
                         icon: savage,
                     },
                     {
-                        text: 'Savage Raid 4',
+                        text: 'Asphodelos: The Fourth Circle (Savage)',
                         gearType: 'Weapon',
                         weekly: true,
                         icon: null,
