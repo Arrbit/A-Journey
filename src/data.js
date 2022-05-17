@@ -65,7 +65,7 @@ const expacs = {
                              },
                             { 
                                 icon: crafted,
-                                text: 'Crafted Gear',
+                                text: 'Classical',
                                 gearType: null,
                                 weekly: false,
                                 midPatch: '6.05'
@@ -121,11 +121,12 @@ const expacs = {
                         type: [
                             { 
                                 icon: dungeon,
-                                text: 'Dungeon Gear',
+                                text: "Alzadaal's Legacy",
                                 weekly: false,
                              },
                         ]
                     },
+
                     {
                         ilvl: '590',
                         type: [
@@ -134,6 +135,12 @@ const expacs = {
                                 text: 'Myths of the Realm: Aglaia',
                                 weekly: true,
                              },
+                             { 
+                                icon: crafted,
+                                text: 'Augmented Classical',
+                                gearType: null,
+                                weekly: false,
+                            },
                         ]
                     },
                     {
